@@ -8,10 +8,6 @@ export const CODES = [
   "DKM", "KM",
 ];
 
-// Kalóriát csak azoknál a kódoknál mutatunk, ahol az Interfood oldala is kiírja.
-// A többi ételnél az API becsült értéket ad, ami félrevezető lehet.
-export const KCAL_CODES = ["SP1", "E2K", "E3K", "E4K", "DKM"];
-
 // JS getUTCDay(): 1 = hétfő, 3 = szerda, 5 = péntek
 export const DAY_KEYS = {
   1: { key: "hetfo", label: "Hétfő" },
@@ -50,10 +46,11 @@ export function isoWeekDays(year, week) {
   return { monday: f(monday), friday: f(friday) };
 }
 
+// Az API a kalóriát adagra (energy_portion_food_*) tárolja.
+// Egyedi ételnél az első mező a teljes adag, a menüknél (DKM, KM) az első a leves,
+// a második a főétel. A harmadik mező a főétel értékének másolata, ezért nem adjuk hozzá.
 function kcalOf(it) {
-  let sum = Number(it.energy_portion_food_one) || 0;
-  if (fixText(it.food_name_two)) sum += Number(it.energy_portion_food_two) || 0;
-  if (fixText(it.food_name_three)) sum += Number(it.energy_portion_food_three) || 0;
+  const sum = (Number(it.energy_portion_food_one) || 0) + (Number(it.energy_portion_food_two) || 0);
   return sum > 0 ? Math.round(sum) : null;
 }
 
@@ -75,7 +72,7 @@ export function buildWeek(menuData, year, week, codes = CODES) {
           cat: fixText(cat.name),
           day: d.key,
           name,
-          kcal: KCAL_CODES.includes(cat.code) ? kcalOf(it) : null,
+          kcal: kcalOf(it),
           price: Math.round(Number(it.price)) + " Ft",
         });
       }
