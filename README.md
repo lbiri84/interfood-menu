@@ -1,7 +1,7 @@
 # Interfood heti válogatás
 
 Egyoldalas oldal az Interfood heti kínálatának átnézéséhez. A hétfői, szerdai és pénteki napokra szóló
-kódokat (SP1, L1K, L2K, L3K, E2K, E3K, E4K, AK, BK, CK, DK, GK, F1K, F2K, F3K, F4K, DKM, KM) lehet kijelölni, majd a kijelölést
+kódokat (SP1, L1K, L2K, L3K, E2K, E3K, E4K, AK, BK, CK, DK, GK, F2K, F3K, F4K, DKM, KM) lehet kijelölni, majd a kijelölést
 vágólapra másolni.
 
 ## Felépítés
