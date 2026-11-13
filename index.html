@@ -413,7 +413,7 @@
     button.copy, button.clear { padding-left: 14px; padding-right: 14px; }
   }
 
-  .name strong { font-weight: 700; }
+  .name .ico { font-size: 13px; margin-right: 4px; vertical-align: -1px; }
   .name .leaf { color: #5fe08c; margin-right: 6px; vertical-align: -2px; flex: none; }
   .img-btn {
     align-self: start; flex: none; width: 30px; height: 30px; padding: 0;
@@ -515,11 +515,34 @@
     return mobileQuery.matches;
   }
 
-  var MEAT_RE = /[\p{L}]*(?:csirke|csibe|marha|sertés|sertes|pulyka|kacsa|liba|bárány|borjú|hal|lazac|harcsa|pisztráng|ponty|szalonna|bacon|kolbász|virsli|sonka|felvágott|csülök|hús|tarja|oldalas|lapocka|kebab|gyros|pacal)[\p{L}]*/giu;
+  // Hústípus-ikonok: csak ott, ahol a név egyértelműen megnevezi az állatot.
+  var MEAT_TYPES = [
+    { icon: "\uD83D\uDC16", title: "Sertés", re: /sertés|sertes|csülök|csülkös|tarja|oldalas|lapocka|karaj/ },
+    { icon: "\uD83D\uDC14", title: "Csirke", re: /csirke|csibe/ },
+    { icon: "\uD83E\uDD83", title: "Pulyka", re: /pulyka/ },
+    { icon: "\uD83E\uDD86", title: "Kacsa / liba", re: /kacsa|liba/ },
+    { icon: "\uD83D\uDC04", title: "Marha / borjú", re: /marha|borjú/ },
+    { icon: "\uD83D\uDC11", title: "Bárány", re: /bárány/ },
+    { icon: "\uD83D\uDC1F", title: "Hal", re: /hal|lazac|harcsa|pisztráng|ponty/ }
+  ];
+  var PIG_SIDE_RE = /sonka|bacon|szalonna/; // csak akkor jelzi a sertést, ha más hús nincs a névben
+  function meatIcons(name) {
+    var n = name.toLowerCase();
+    var found = [];
+    MEAT_TYPES.forEach(function (t) {
+      var m = t.re.exec(n);
+      if (m) found.push({ t: t, at: m.index });
+    });
+    if (!found.length && PIG_SIDE_RE.test(n)) found.push({ t: MEAT_TYPES[0], at: 0 });
+    found.sort(function (x, y) { return x.at - y.at; });
+    return found.map(function (f) {
+      return "<span class=\"ico\" role=\"img\" aria-label=\"" + f.t.title + "\" title=\"" + f.t.title + "\">" + f.t.icon + "</span>";
+    }).join("");
+  }
   var LEAF_SVG = "<svg class=\"leaf\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" role=\"img\" aria-label=\"Húsmentes\"><title>Húsmentes</title><path d=\"M5 19c0-8 5-14 15-14 0 10-6 15-14 15\"/><path d=\"M5 19c3-5 6-8 10-10\"/></svg>";
   function nameHtml(it) {
-    var h = esc(it.name).replace(MEAT_RE, "<strong>$&</strong>");
-    return it.veg ? LEAF_SVG + h : h;
+    var h = esc(it.name);
+    return (it.veg ? LEAF_SVG : meatIcons(it.name)) + h;
   }
 
   function buildFoodRow(it, day) {
