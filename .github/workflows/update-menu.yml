@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
   schedule:
-    # Péntekenként: fő futás ~8:00 (budapesti tél), biztonsági második futás délben.
-    - cron: "0 7 * * 5"
-    - cron: "0 11 * * 5"
+    # Péntekenként a 9:00-s (budapesti) rendelési határidő előtt: fő futás 6:07/7:07, biztonsági 7:07/8:07 (tél/nyár).
+    - cron: "7 5 * * 5"
+    - cron: "7 6 * * 5"
   workflow_dispatch:
 
 permissions:
