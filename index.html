@@ -421,8 +421,6 @@
     background: rgba(255, 255, 255, 0.08); color: var(--ink);
     border: 1px solid var(--line); border-radius: 50%;
   }
-  .img-btn.on { background: var(--coral); color: var(--coral-ink); border-color: var(--coral); }
-  .thumb { display: block; width: 100%; max-width: 260px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; margin-top: 8px; background: rgba(255,255,255,0.08); }
   .img-btn:hover { background: var(--coral); color: var(--coral-ink); border-color: var(--coral); }
   .img-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
   #imgPop {
@@ -760,22 +758,6 @@
     e.preventDefault();
     e.stopPropagation();
     imgPop.style.display = "none";
-    if (!canHover) {
-      // Érintőképernyő: a sorban nyílik ki egy kis kép (mint az egérrel a hover), arra koppintva nagy.
-      var wrap = btn.parentNode.querySelector(".name-wrap");
-      var thumb = wrap.querySelector(".thumb");
-      if (thumb) { thumb.remove(); btn.classList.remove("on"); return; }
-      thumb = document.createElement("img");
-      thumb.className = "thumb";
-      thumb.alt = "";
-      thumb.loading = "lazy";
-      thumb.src = imgUrl(btn.dataset.id, 560, 420);
-      thumb.dataset.id = btn.dataset.id;
-      thumb.dataset.name = btn.dataset.name;
-      wrap.appendChild(thumb);
-      btn.classList.add("on");
-      return;
-    }
     openLightbox(btn.dataset.id, btn.dataset.name);
   });
   function openLightbox(id, name) {
@@ -783,13 +765,6 @@
     lbText.textContent = name;
     lightbox.classList.add("show");
   }
-  daysEl.addEventListener("click", function (e) {
-    var t = e.target.closest && e.target.closest(".thumb");
-    if (!t) return;
-    e.preventDefault();
-    e.stopPropagation();
-    openLightbox(t.dataset.id, t.dataset.name);
-  });
   lightbox.addEventListener("click", function () { lightbox.classList.remove("show"); lbImg.removeAttribute("src"); });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { lightbox.classList.remove("show"); }
