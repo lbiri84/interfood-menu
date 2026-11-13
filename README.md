@@ -10,7 +10,7 @@ vágólapra másolni.
 - `data/menu.json`: az aktuális és a következő hetek kínálata. Ezt a GitHub Actions tölti.
 - `scripts/fetch-menu.mjs`: beolvassa az Interfood nyilvános API-ját, és csak változás esetén írja a fájlt.
 - `scripts/lib.mjs`: az API-válasz feldolgozása.
-- `.github/workflows/update-menu.yml`: hatóránként lefuttatja a beolvasást, elmenti a változást, és közzéteszi az oldalt GitHub Pages-en.
+- `.github/workflows/update-menu.yml`: péntekenként (reggel és egy biztonsági futás délben) lefuttatja a beolvasást, elmenti a változást, és közzéteszi az oldalt GitHub Pages-en.
 
 ## Kódok vagy napok módosítása
 
