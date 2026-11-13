@@ -262,8 +262,8 @@
 
   .food-row {
     display: grid;
-    grid-template-columns: 22px 66px 1fr;
-    gap: 12px;
+    grid-template-columns: 44px 58px 1fr;
+    gap: 10px;
     align-items: start;
     padding: 10px 16px;
     border-bottom: 1px solid var(--line);
@@ -308,8 +308,14 @@
     text-align: center;
     font-variant-numeric: tabular-nums;
   }
-  .code-col .kcal { margin-top: 2px; }
-  input.chk { margin-top: 1px; }
+  .tick-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .tick-col .price { margin: 0; white-space: nowrap; }
   .code {
     font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
     font-size: 11.5px;
@@ -525,8 +531,8 @@
       : "<div class=\"kcal none\">nincs adat</div>";
 
     row.innerHTML =
-      "<input class=\"chk\" type=\"checkbox\"" + checkedAttr + " id=\"" + id + "\" data-code=\"" + esc(it.code) + "\" data-day=\"" + esc(day.key) + "\" data-daylabel=\"" + esc(day.label) + "\">" +
-      "<span class=\"code-col\"><span class=\"code\">" + esc(it.code) + "</span>" + kcalHtml + "<div class=\"price\">" + esc(it.price) + "</div></span>" +
+      "<span class=\"tick-col\"><input class=\"chk\" type=\"checkbox\"" + checkedAttr + " id=\"" + id + "\" data-code=\"" + esc(it.code) + "\" data-day=\"" + esc(day.key) + "\" data-daylabel=\"" + esc(day.label) + "\"><span class=\"price\">" + esc(it.price) + "</span></span>" +
+      "<span class=\"code-col\"><span class=\"code\">" + esc(it.code) + "</span>" + kcalHtml + "</span>" +
       "<span class=\"name-wrap\"><span class=\"name\">" + esc(it.name) + "</span></span>";
 
     return row;
