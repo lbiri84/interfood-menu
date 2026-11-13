@@ -427,15 +427,10 @@
     <div class="head-text">
       <p class="eyebrow" id="eyebrow">Heti ebédrendelés</p>
       <h1><span class="h1-a">Interfood</span><span class="h1-b">Válogatás</span></h1>
-      <p class="sub">Kiválasztott kódok: SP1, L1K, L2K, L3K, E2K, E3K, E4K, AK, BK, CK, DK, GK, F1K, F2K, F3K, F4K, DKM, KM, csak a hétfői, szerdai és pénteki napokra.</p>
     </div>
     <div class="refresh-box">
       <div class="refresh-actions">
         <select id="weekSel" aria-label="Hét kiválasztása" hidden></select>
-        <button class="refresh" id="refreshBtn" type="button">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
-          <span id="refreshLabel">Frissítés</span>
-        </button>
       </div>
       <p class="status" id="status" role="status"></p>
     </div>
@@ -695,8 +690,6 @@
 
   /* ---------- Adatok betöltése ---------- */
 
-  var refreshBtn = document.getElementById("refreshBtn");
-  var refreshLabel = document.getElementById("refreshLabel");
   var statusEl = document.getElementById("status");
   var eyebrowEl = document.getElementById("eyebrow");
   var weekSel = document.getElementById("weekSel");
@@ -742,8 +735,6 @@
   }
 
   async function loadData(manual) {
-    refreshBtn.disabled = true;
-    refreshLabel.textContent = "Frissítés…";
     try {
       var res = await fetch(DATA_URL + "?t=" + Date.now(), { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
@@ -764,17 +755,13 @@
       setStatus(fetchedLabel ? "A kínálat utoljára ekkor változott: " + fetchedLabel : "", false);
     } catch (e) {
       if (!WEEKS.length) {
-        daysEl.innerHTML = "<p class=\"loading-note error\">A kínálat betöltése nem sikerült. Próbáld újra a Frissítés gombbal.</p>";
+        daysEl.innerHTML = "<p class=\"loading-note error\">A kínálat betöltése nem sikerült. Töltsd újra az oldalt.</p>";
       }
-      setStatus("A frissítés nem sikerült. Próbáld újra egy perc múlva.", true);
-    } finally {
-      refreshBtn.disabled = false;
-      refreshLabel.textContent = "Frissítés";
+      setStatus("Az adatok betöltése nem sikerült.", true);
     }
   }
 
   weekSel.addEventListener("change", function () { applyWeek(Number(weekSel.value)); });
-  refreshBtn.addEventListener("click", function () { loadData(true); });
 
   loadData(false);
 </script>
