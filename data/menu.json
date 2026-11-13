@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-13T16:11:51.355Z",
+ "fetchedAt": "2026-11-13T16:41:21.519Z",
  "currentWeek": {
   "year": 2026,
   "week": 47
@@ -33,6 +33,7 @@
      "cat": "Sport és egészség",
      "day": "hetfo",
      "name": "Kapros halfilé aszalt paradicsomos bulgurral, párolt zöldséggel, salsával",
+     "veg": false,
      "kcal": 560,
      "price": "2360 Ft"
     },
@@ -42,6 +43,7 @@
      "cat": "Sport és egészség",
      "day": "szerda",
      "name": "Kókuszos-chilis csirkecomb filé tepsis édesburgonyával, zellerrel",
+     "veg": false,
      "kcal": 712,
      "price": "2060 Ft"
     },
@@ -51,6 +53,7 @@
      "cat": "Sport és egészség",
      "day": "pentek",
      "name": "Céklás bulgurrizottó csirkemellel",
+     "veg": false,
      "kcal": 696,
      "price": "1940 Ft"
     },
@@ -60,6 +63,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Tárkonyos legényfogóleves",
+     "veg": false,
      "kcal": 234,
      "price": "980 Ft"
     },
@@ -69,6 +73,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Alföldi csibeleves",
+     "veg": false,
      "kcal": 309,
      "price": "925 Ft"
     },
@@ -78,6 +83,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Korhelyleves",
+     "veg": false,
      "kcal": 417,
      "price": "925 Ft"
     },
@@ -87,6 +93,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Sütőtök krémleves, pirított tökmaggal",
+     "veg": true,
      "kcal": 339,
      "price": "840 Ft"
     },
@@ -96,6 +103,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Tavaszi zöldborsóleves",
+     "veg": true,
      "kcal": 219,
      "price": "770 Ft"
     },
@@ -105,6 +113,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Tejfölös karfiol leves",
+     "veg": true,
      "kcal": 246,
      "price": "820 Ft"
     },
@@ -114,6 +123,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Görög gyümölcsleves",
+     "veg": true,
      "kcal": 399,
      "price": "865 Ft"
     },
@@ -123,6 +133,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Tejszínes sárgabarack krémleves",
+     "veg": true,
      "kcal": 300,
      "price": "770 Ft"
     },
@@ -132,6 +143,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Tejszínes körte krémleves",
+     "veg": true,
      "kcal": 342,
      "price": "820 Ft"
     },
@@ -141,6 +153,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Roston sült csirkemell, karfiolpüré",
+     "veg": false,
      "kcal": 243,
      "price": "1390 Ft"
     },
@@ -150,6 +163,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Pulykamell pörkölt, teljes kiőrlésű durum tészta",
+     "veg": false,
      "kcal": 417,
      "price": "1375 Ft"
     },
@@ -159,6 +173,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Ázsiai pesztós csirke mogyorós rizstésztával",
+     "veg": false,
      "kcal": 467,
      "price": "1440 Ft"
     },
@@ -168,6 +183,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Pulykamell szelet bolognai raguval, durum tészta köret",
+     "veg": false,
      "kcal": 483,
      "price": "1455 Ft"
     },
@@ -177,6 +193,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Citromos, zöldfűszeres tonhal, párolt brokkoli",
+     "veg": false,
      "kcal": 363,
      "price": "1845 Ft"
     },
@@ -186,6 +203,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Grill karaj pirított gombával, light burgonyapüré",
+     "veg": false,
      "kcal": 414,
      "price": "1420 Ft"
     },
@@ -195,6 +213,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Sült csirkecomb, zöldségekkel, rizzsel",
+     "veg": false,
      "kcal": 447,
      "price": "1295 Ft"
     },
@@ -204,6 +223,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Roston sült csirkemell almakarikákkal, petrezselymes rizs",
+     "veg": false,
      "kcal": 474,
      "price": "1340 Ft"
     },
@@ -213,6 +233,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Gombarizottó reszelt sajttal",
+     "veg": true,
      "kcal": 462,
      "price": "1160 Ft"
     },
@@ -222,6 +243,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Vörösboros marhapörkölt, tarhonya",
+     "veg": false,
      "kcal": 573,
      "price": "1555 Ft"
     },
@@ -231,6 +253,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Spenótos-sajtos galuska",
+     "veg": true,
      "kcal": 714,
      "price": "1220 Ft"
     },
@@ -240,6 +263,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Paradicsomos húsgombóc főtt burgonya",
+     "veg": false,
      "kcal": 621,
      "price": "1240 Ft"
     },
@@ -249,6 +273,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Túrós csusza bacon szalonnával",
+     "veg": false,
      "kcal": 915,
      "price": "1340 Ft"
     },
@@ -258,6 +283,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Borjúpaprikás, galuska",
+     "veg": false,
      "kcal": 675,
      "price": "1640 Ft"
     },
@@ -267,6 +293,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Mustáros csirkemell, tészta köret",
+     "veg": false,
      "kcal": 453,
      "price": "1280 Ft"
     },
@@ -276,6 +303,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Vadas csirkemell, tészta köret",
+     "veg": false,
      "kcal": 570,
      "price": "1285 Ft"
     },
@@ -285,6 +313,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Pacalpörkölt, főtt burgonya",
+     "veg": false,
      "kcal": 624,
      "price": "1460 Ft"
     },
@@ -294,6 +323,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Mákos tészta",
+     "veg": true,
      "kcal": 516,
      "price": "1090 Ft"
     },
@@ -303,6 +333,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Bolognai spagetti",
+     "veg": false,
      "kcal": 612,
      "price": "1380 Ft"
     },
@@ -312,6 +343,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Sajtos, baconos sült csirkemell, tepsis burgonya",
+     "veg": false,
      "kcal": 683,
      "price": "1580 Ft"
     },
@@ -321,6 +353,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Lecsó virslivel",
+     "veg": false,
      "kcal": 372,
      "price": "1570 Ft"
     },
@@ -330,6 +363,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Stroganoff csirkemelltokány, burgonyakrokett",
+     "veg": false,
      "kcal": 516,
      "price": "1455 Ft"
     },
@@ -339,6 +373,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Csirkemell mézben pácolt sonkával, ementáli sajttal sütve, rozmaringvajban, burgonyapüré",
+     "veg": false,
      "kcal": 615,
      "price": "1440 Ft"
     },
@@ -348,6 +383,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Fűszeres sült csirkemell sajtkrémmártással, farfalle tésztával",
+     "veg": false,
      "kcal": 615,
      "price": "1340 Ft"
     },
@@ -357,6 +393,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Paradicsomos káposztafőzelék, sült virsli",
+     "veg": false,
      "kcal": 426,
      "price": "1180 Ft"
     },
@@ -366,6 +403,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Tejfölös babfőzelék, sült virsli",
+     "veg": false,
      "kcal": 774,
      "price": "1240 Ft"
     },
@@ -375,6 +413,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Zöldborsófőzelék, sült virsli",
+     "veg": false,
      "kcal": 582,
      "price": "1285 Ft"
     },
@@ -384,6 +423,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Paradicsomos káposztafőzelék, Sertéssült",
+     "veg": false,
      "kcal": 450,
      "price": "1220 Ft"
     },
@@ -393,6 +433,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Tejfölös babfőzelék, fasírt",
+     "veg": false,
      "kcal": 777,
      "price": "1265 Ft"
     },
@@ -402,6 +443,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Zöldborsófőzelék, Rántott párizsi",
+     "veg": false,
      "kcal": 675,
      "price": "1330 Ft"
     },
@@ -411,6 +453,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Paradicsomos káposztafőzelék, Rántott sajt",
+     "veg": true,
      "kcal": 555,
      "price": "1220 Ft"
     },
@@ -420,6 +463,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Tejfölös babfőzelék, Rántott sajt",
+     "veg": true,
      "kcal": 903,
      "price": "1285 Ft"
     },
@@ -429,6 +473,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Zöldborsófőzelék, Rántott sajt",
+     "veg": true,
      "kcal": 714,
      "price": "1340 Ft"
     },
@@ -438,6 +483,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "hetfo",
      "name": "Csirkehúsleves gazdagon zöldségekkel (csirkemellből), Pirított csirkecsíkok tepsis burgonyával, zöldségekkel",
+     "veg": false,
      "kcal": 417,
      "price": "2225 Ft"
     },
@@ -447,6 +493,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "szerda",
      "name": "Tárkonyos zöldségragu leves (gomba, z.borsó, zeller, gyökér), Olaszos tepsis csirkemell, zöldséges vadrizs",
+     "veg": false,
      "kcal": 693,
      "price": "2130 Ft"
     },
@@ -456,6 +503,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "pentek",
      "name": "Tavaszi zöldborsóleves, Csirkemell vadasan, szarvacska tészta",
+     "veg": false,
      "kcal": 558,
      "price": "2260 Ft"
     },
@@ -465,6 +513,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "hetfo",
      "name": "Görög gyümölcsleves, Stroganoff csirkemelltokány, burgonyakrokett",
+     "veg": false,
      "kcal": 915,
      "price": "2180 Ft"
     },
@@ -474,6 +523,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "szerda",
      "name": "Tejszínes sárgabarack krémleves, Zöldborsós, tejszínes csirkemell, csavart tészta",
+     "veg": false,
      "kcal": 837,
      "price": "1940 Ft"
     },
@@ -483,6 +533,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "pentek",
      "name": "Tejszínes körte krémleves, Mustáros csirkemell, tészta köret",
+     "veg": false,
      "kcal": 795,
      "price": "1975 Ft"
     }
@@ -516,6 +567,7 @@
      "cat": "Sport és egészség",
      "day": "hetfo",
      "name": "Királyrák tejszínes zöldséges spagettivel",
+     "veg": false,
      "kcal": 658,
      "price": "2140 Ft"
     },
@@ -525,6 +577,7 @@
      "cat": "Sport és egészség",
      "day": "szerda",
      "name": "Fehérborban posírozott vörössügér, hüvelyes zöldborsó, steak burgonya",
+     "veg": false,
      "kcal": 607,
      "price": "2495 Ft"
     },
@@ -534,6 +587,7 @@
      "cat": "Sport és egészség",
      "day": "pentek",
      "name": "Pikáns marhaszeletek avokádós dippel, sült zellerrel, édesburgonyával",
+     "veg": false,
      "kcal": 798,
      "price": "3220 Ft"
     },
@@ -543,6 +597,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Zöldborsós csirkeragu leves",
+     "veg": false,
      "kcal": 381,
      "price": "965 Ft"
     },
@@ -552,6 +607,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Májgaluska leves",
+     "veg": false,
      "kcal": 147,
      "price": "720 Ft"
     },
@@ -561,6 +617,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Gulyásleves",
+     "veg": false,
      "kcal": 294,
      "price": "1050 Ft"
     },
@@ -570,6 +627,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Tejfölös gombaleves",
+     "veg": true,
      "kcal": 222,
      "price": "790 Ft"
     },
@@ -579,6 +637,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Paradicsomleves",
+     "veg": true,
      "kcal": 357,
      "price": "740 Ft"
     },
@@ -588,6 +647,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Sajtos-tejszínes brokkoli krémleves, pirított zsemlekockák",
+     "veg": true,
      "kcal": 309,
      "price": "795 Ft"
     },
@@ -597,6 +657,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Tejszínes őszibarackleves",
+     "veg": true,
      "kcal": 288,
      "price": "790 Ft"
     },
@@ -606,6 +667,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Tejszínes meggyleves",
+     "veg": true,
      "kcal": 282,
      "price": "895 Ft"
     },
@@ -615,6 +677,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Görög gyümölcsleves",
+     "veg": true,
      "kcal": 336,
      "price": "890 Ft"
     },
@@ -624,6 +687,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Sajtos csirkesaslik, párolt bébirépa",
+     "veg": false,
      "kcal": 450,
      "price": "1695 Ft"
     },
@@ -633,6 +697,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Füstöltsajttal ropogósra sült pulykamell, párolt bébirépa, zöldborsó",
+     "veg": false,
      "kcal": 384,
      "price": "1580 Ft"
     },
@@ -642,6 +707,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Grill csirkecomb (bőr nélkül), almás párolt káposzta",
+     "veg": false,
      "kcal": 405,
      "price": "1395 Ft"
     },
@@ -651,6 +717,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Grillezett karaj pirított gombával,paradicsomos bulgurral",
+     "veg": false,
      "kcal": 532,
      "price": "975 Ft"
     },
@@ -660,6 +727,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Csirkemell gyros, zöldségekkel, rizzsel",
+     "veg": false,
      "kcal": 375,
      "price": "1395 Ft"
     },
@@ -669,6 +737,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Füstölt sajtos csirkemellrizottó",
+     "veg": false,
      "kcal": 414,
      "price": "965 Ft"
     },
@@ -678,6 +747,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Bolognai spagetti zöldséggel gazdagon",
+     "veg": false,
      "kcal": 564,
      "price": "1360 Ft"
     },
@@ -687,6 +757,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Tojásos lecsó virslivel, bulgurral",
+     "veg": false,
      "kcal": 408,
      "price": "940 Ft"
     },
@@ -696,6 +767,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Tengeri halfilé pirított gombával, párolt zöldségköret",
+     "veg": false,
      "kcal": 315,
      "price": "1495 Ft"
     },
@@ -705,6 +777,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Csirkemellel rakott kelkáposzta füstölt sajttal",
+     "veg": false,
      "kcal": 612,
      "price": "1485 Ft"
     },
@@ -714,6 +787,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Pulykamell vadasan, spagetti",
+     "veg": false,
      "kcal": 519,
      "price": "1375 Ft"
     },
@@ -723,6 +797,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Betyáros töltött csirkemell, rizi-bizi",
+     "veg": false,
      "kcal": 630,
      "price": "1490 Ft"
     },
@@ -732,6 +807,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Tejszínes, tárkonyos csirkemell csíkok, spagetti , reszelt sajt",
+     "veg": false,
      "kcal": 600,
      "price": "1340 Ft"
     },
@@ -741,6 +817,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Házi túrógombóc, édes tejfölmártás",
+     "veg": true,
      "kcal": 783,
      "price": "1350 Ft"
     },
@@ -750,6 +827,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Bácskai rizseshús",
+     "veg": false,
      "kcal": 636,
      "price": "1245 Ft"
     },
@@ -759,6 +837,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Marhapörkölt, tarhonya",
+     "veg": false,
      "kcal": 579,
      "price": "1590 Ft"
     },
@@ -768,6 +847,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Csirkemáj roston, burgonyapüré",
+     "veg": false,
      "kcal": 579,
      "price": "1240 Ft"
     },
@@ -777,6 +857,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Cigánypecsenye sertéstarjából, hagymás törtburgonya",
+     "veg": false,
      "kcal": 828,
      "price": "1460 Ft"
     },
@@ -786,6 +867,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Gödöllői göngyölt sertésszelet, petrezselymes burgonya",
+     "veg": false,
      "kcal": 588,
      "price": "1320 Ft"
     },
@@ -795,6 +877,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Hagymás rostélyos, petrezselymes burgonya",
+     "veg": false,
      "kcal": 642,
      "price": "1595 Ft"
     },
@@ -804,6 +887,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Sült csirkecomb, rizi-bizi",
+     "veg": false,
      "kcal": 483,
      "price": "1240 Ft"
     },
@@ -813,6 +897,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Tepsis pulykamell gombával, sajttal, baconnel, sült burgonya",
+     "veg": false,
      "kcal": 520,
      "price": "1520 Ft"
     },
@@ -822,6 +907,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Húsos rakott zöldbab",
+     "veg": false,
      "kcal": 582,
      "price": "1340 Ft"
     },
@@ -831,6 +917,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Görögös fetás csirkemell olivabogyóval, burgonyapüré",
+     "veg": false,
      "kcal": 492,
      "price": "1420 Ft"
     },
@@ -840,6 +927,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Finomfőzelék, sült csirkemell",
+     "veg": false,
      "kcal": 390,
      "price": "1240 Ft"
     },
@@ -849,6 +937,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Tökfőzelék, Sertéspörkölt",
+     "veg": false,
      "kcal": 441,
      "price": "1340 Ft"
     },
@@ -858,6 +947,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Sárgaborsó főzelék, sült oldalas",
+     "veg": false,
      "kcal": 858,
      "price": "1265 Ft"
     },
@@ -867,6 +957,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Finomfőzelék, kis bécsi szelet",
+     "veg": false,
      "kcal": 540,
      "price": "1240 Ft"
     },
@@ -876,6 +967,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Tökfőzelék, fasírt",
+     "veg": false,
      "kcal": 480,
      "price": "1385 Ft"
     },
@@ -885,6 +977,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Sárgaborsó főzelék, sült virsli",
+     "veg": false,
      "kcal": 561,
      "price": "1195 Ft"
     },
@@ -894,6 +987,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Finomfőzelék, gombafasírt",
+     "veg": true,
      "kcal": 459,
      "price": "1220 Ft"
     },
@@ -903,6 +997,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Tökfőzelék, zöldségvagdalt",
+     "veg": true,
      "kcal": 558,
      "price": "1320 Ft"
     },
@@ -912,6 +1007,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Sárgaborsó főzelék, Rántott sajt",
+     "veg": false,
      "kcal": 690,
      "price": "1245 Ft"
     },
@@ -921,6 +1017,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "hetfo",
      "name": "Könnyű tejfölös zöldbableves, Óvári sertésborda, tepsis burgonyával, bébi répával",
+     "veg": false,
      "kcal": 582,
      "price": "2150 Ft"
     },
@@ -930,6 +1027,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "szerda",
      "name": "Csontleves gazdagon zöldségekkel fitt tésztával, Grill csirkemell, sajtos rizzsel, paradicsommal",
+     "veg": false,
      "kcal": 708,
      "price": "2130 Ft"
     },
@@ -939,6 +1037,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "pentek",
      "name": "Sütőtökkrémleves píritott tökmaggal (fitt), Muszaka",
+     "veg": false,
      "kcal": 795,
      "price": "2435 Ft"
     },
@@ -948,6 +1047,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "hetfo",
      "name": "Milla kedvence: Zöldborsós csirkeragu leves, Grízes tészta gyümölcsöntettel",
+     "veg": false,
      "kcal": 792,
      "price": "1950 Ft"
     },
@@ -957,6 +1057,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "szerda",
      "name": "Májgaluska leves, Pulykamell vadasan, spagetti",
+     "veg": false,
      "kcal": 666,
      "price": "1970 Ft"
     },
@@ -966,6 +1067,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "pentek",
      "name": "Gulyásleves, Máglyarakás",
+     "veg": false,
      "kcal": 834,
      "price": "2160 Ft"
     }
@@ -999,6 +1101,7 @@
      "cat": "Sport és egészség",
      "day": "hetfo",
      "name": "Mustáros roston karaj füstölt sajtos mártással, zöldséges hajdina",
+     "veg": false,
      "kcal": 809,
      "price": "1940 Ft"
     },
@@ -1008,6 +1111,7 @@
      "cat": "Sport és egészség",
      "day": "szerda",
      "name": "Kapros joghurtos harcsapaprikás, teljes kiőrlésű pennével",
+     "veg": false,
      "kcal": 679,
      "price": "2420 Ft"
     },
@@ -1017,6 +1121,7 @@
      "cat": "Sport és egészség",
      "day": "pentek",
      "name": "Aszalt szilvás töltött pulykamell, gyömbéres édesburgonyapüré",
+     "veg": false,
      "kcal": 748,
      "price": "2465 Ft"
     },
@@ -1026,6 +1131,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Frankfurti leves",
+     "veg": false,
      "kcal": 354,
      "price": "880 Ft"
     },
@@ -1035,6 +1141,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Húsleves gazdagon",
+     "veg": false,
      "kcal": 159,
      "price": "820 Ft"
     },
@@ -1044,6 +1151,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Falusi kacsaleves csigatésztával",
+     "veg": false,
      "kcal": 210,
      "price": "920 Ft"
     },
@@ -1053,6 +1161,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Zöldborsóleves",
+     "veg": true,
      "kcal": 243,
      "price": "755 Ft"
     },
@@ -1062,6 +1171,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Lebbencsleves",
+     "veg": false,
      "kcal": 186,
      "price": "720 Ft"
     },
@@ -1071,6 +1181,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Sütőtök krémleves, pirított tökmaggal",
+     "veg": true,
      "kcal": 339,
      "price": "840 Ft"
     },
@@ -1080,6 +1191,7 @@
      "cat": "Kis Leves",
      "day": "hetfo",
      "name": "Tejszínes cseresznyeleves",
+     "veg": true,
      "kcal": 297,
      "price": "840 Ft"
     },
@@ -1089,6 +1201,7 @@
      "cat": "Kis Leves",
      "day": "szerda",
      "name": "Tejszínes eperleves",
+     "veg": true,
      "kcal": 270,
      "price": "740 Ft"
     },
@@ -1098,6 +1211,7 @@
      "cat": "Kis Leves",
      "day": "pentek",
      "name": "Erdei gyümölcsleves",
+     "veg": true,
      "kcal": 324,
      "price": "870 Ft"
     },
@@ -1107,6 +1221,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Sült karaj, Paradicsomos káposztafőzelék",
+     "veg": false,
      "kcal": 405,
      "price": "1265 Ft"
     },
@@ -1116,6 +1231,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Serpenyős csirkemell falatok, zöldségekkel, rizzsel",
+     "veg": false,
      "kcal": 417,
      "price": "1420 Ft"
     },
@@ -1125,6 +1241,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Zöldséges csirkemell paprikás, teljes kiőrlésű durum tészta",
+     "veg": false,
      "kcal": 537,
      "price": "1320 Ft"
     },
@@ -1134,6 +1251,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Fűszeres, sajtos tejfölös pulykatokány, zöldséges rizs",
+     "veg": false,
      "kcal": 549,
      "price": "1520 Ft"
     },
@@ -1143,6 +1261,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Zöldséges kuszkusz sült csirkecombbal",
+     "veg": false,
      "kcal": 549,
      "price": "1255 Ft"
     },
@@ -1152,6 +1271,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Ínyenc rakott zöldbab",
+     "veg": false,
      "kcal": 507,
      "price": "1420 Ft"
     },
@@ -1161,6 +1281,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
      "name": "Dél-indiai paradicsomos-csirkés rizs",
+     "veg": false,
      "kcal": 363,
      "price": "1265 Ft"
     },
@@ -1170,6 +1291,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
      "name": "Spenótos pesztós tészta parmezánnal",
+     "veg": true,
      "kcal": 411,
      "price": "1220 Ft"
     },
@@ -1179,6 +1301,7 @@
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
      "name": "Paradicsomos húsgombóc, paradicsommártás (köret nélkül)",
+     "veg": false,
      "kcal": 396,
      "price": "1220 Ft"
     },
@@ -1188,6 +1311,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Gombapaprikás, orsó tészta",
+     "veg": true,
      "kcal": 504,
      "price": "1165 Ft"
     },
@@ -1197,6 +1321,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Káposztás tészta",
+     "veg": true,
      "kcal": 510,
      "price": "1090 Ft"
     },
@@ -1206,6 +1331,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Bogdáni aprópecsenye",
+     "veg": false,
      "kcal": 690,
      "price": "1440 Ft"
     },
@@ -1215,6 +1341,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Western csirkemell steak, vegyes köret (sült burg., párolt rizs)",
+     "veg": false,
      "kcal": 492,
      "price": "1355 Ft"
     },
@@ -1224,6 +1351,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Tejbegríz kakaóval",
+     "veg": true,
      "kcal": 582,
      "price": "1120 Ft"
     },
@@ -1233,6 +1361,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Barbecue pácban sült csirkemell, steak burgonya",
+     "veg": false,
      "kcal": 568,
      "price": "1490 Ft"
     },
@@ -1242,6 +1371,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Húsos rakott káposzta",
+     "veg": false,
      "kcal": 453,
      "price": "1250 Ft"
     },
@@ -1251,6 +1381,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Mézes-mandarinos csirkemell steak, burgonyapüré",
+     "veg": false,
      "kcal": 555,
      "price": "1470 Ft"
     },
@@ -1260,6 +1391,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Sajtos tortellini, vadasmártás",
+     "veg": true,
      "kcal": 447,
      "price": "1185 Ft"
     },
@@ -1269,6 +1401,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Sztrapacska (juhtúrós-tepertős galuska)",
+     "veg": false,
      "kcal": 1110,
      "price": "1390 Ft"
     },
@@ -1278,6 +1411,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Sertéspörkölt, galuska",
+     "veg": false,
      "kcal": 666,
      "price": "1240 Ft"
     },
@@ -1287,6 +1421,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Sajtos-tejfölös sült csirkemell csíkok, jázmin rizs",
+     "veg": false,
      "kcal": 690,
      "price": "1380 Ft"
     },
@@ -1296,6 +1431,7 @@
      "cat": "Kis adag",
      "day": "hetfo",
      "name": "Óvári pulykamell (sonka, gomba, sajt), sült burgonya",
+     "veg": false,
      "kcal": 490,
      "price": "1495 Ft"
     },
@@ -1305,6 +1441,7 @@
      "cat": "Kis adag",
      "day": "szerda",
      "name": "Csirkehússal, tojással rakott sajtos brokkoli",
+     "veg": false,
      "kcal": 504,
      "price": "1520 Ft"
     },
@@ -1314,6 +1451,7 @@
      "cat": "Kis adag",
      "day": "pentek",
      "name": "Harcsapaprikás, vajas galuska",
+     "veg": false,
      "kcal": 594,
      "price": "1540 Ft"
     },
@@ -1323,6 +1461,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Lencsefőzelék, fasírt",
+     "veg": false,
      "kcal": 666,
      "price": "1220 Ft"
     },
@@ -1332,6 +1471,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Zöldbabfőzelék, fasírt",
+     "veg": false,
      "kcal": 558,
      "price": "1275 Ft"
     },
@@ -1341,6 +1481,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Parajfőzelék, fasírt",
+     "veg": false,
      "kcal": 564,
      "price": "1240 Ft"
     },
@@ -1350,6 +1491,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Lencsefőzelék, sült virsli",
+     "veg": false,
      "kcal": 660,
      "price": "1220 Ft"
     },
@@ -1359,6 +1501,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Zöldbabfőzelék, Sertéspörkölt",
+     "veg": false,
      "kcal": 519,
      "price": "1245 Ft"
     },
@@ -1368,6 +1511,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Parajfőzelék, sült csirkemell",
+     "veg": false,
      "kcal": 429,
      "price": "1240 Ft"
     },
@@ -1377,6 +1521,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
      "name": "Lencsefőzelék, Rántott mozzarella",
+     "veg": true,
      "kcal": 789,
      "price": "1250 Ft"
     },
@@ -1386,6 +1531,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
      "name": "Zöldbabfőzelék, Rántott sajt",
+     "veg": true,
      "kcal": 684,
      "price": "1320 Ft"
     },
@@ -1395,6 +1541,7 @@
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
      "name": "Parajfőzelék, főtt tojás",
+     "veg": true,
      "kcal": 423,
      "price": "1160 Ft"
     },
@@ -1404,6 +1551,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "hetfo",
      "name": "Tejfölös gombaleves (fitt), Szecsuáni csípős csirkecsíkok tojásos barna rizzsel",
+     "veg": false,
      "kcal": 675,
      "price": "2225 Ft"
     },
@@ -1413,6 +1561,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "szerda",
      "name": "Fitt májgaluska leves, Rántott sertésborda, sült zöldség (light)",
+     "veg": false,
      "kcal": 558,
      "price": "2185 Ft"
     },
@@ -1422,6 +1571,7 @@
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "pentek",
      "name": "Tejfölös karfiolleves, Grill csirkecombfilé bébirépával, kukoricával",
+     "veg": false,
      "kcal": 525,
      "price": "2195 Ft"
     },
@@ -1431,6 +1581,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "hetfo",
      "name": "Zöldborsóleves, Western csirkemell steak, vegyes köret (sült burg., párolt rizs)",
+     "veg": false,
      "kcal": 735,
      "price": "1985 Ft"
     },
@@ -1440,6 +1591,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "szerda",
      "name": "Húsleves gazdagon, Káposztás tészta",
+     "veg": false,
      "kcal": 669,
      "price": "1795 Ft"
     },
@@ -1449,6 +1601,7 @@
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "pentek",
      "name": "Falusi kacsaleves csigatésztával, Meggyes töltött nudli",
+     "veg": false,
      "kcal": 865,
      "price": "2120 Ft"
     }
