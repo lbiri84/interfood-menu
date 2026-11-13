@@ -68,6 +68,7 @@ export function buildWeek(menuData, year, week, codes = CODES) {
         if (!name) continue;
         dates[d.key] = it.date;
         items.push({
+          id: it.id,
           code: cat.code,
           cat: fixText(cat.name),
           day: d.key,

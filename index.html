@@ -287,7 +287,7 @@
 
   .food-row {
     display: grid;
-    grid-template-columns: 44px 58px 1fr;
+    grid-template-columns: 44px 58px 1fr auto;
     gap: 10px;
     align-items: start;
     padding: 11px 18px 11px 14px;
@@ -418,6 +418,28 @@
     footer.bar { padding-left: 16px; padding-right: 16px; }
     button.copy, button.clear { padding-left: 14px; padding-right: 14px; }
   }
+
+  .img-btn {
+    align-self: start; flex: none; width: 30px; height: 30px; padding: 0;
+    display: grid; place-content: center; cursor: pointer;
+    background: rgba(255, 255, 255, 0.08); color: var(--ink);
+    border: 1px solid var(--line); border-radius: 50%;
+  }
+  .img-btn:hover { background: var(--coral); color: var(--coral-ink); border-color: var(--coral); }
+  .img-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+  #imgPop {
+    position: fixed; z-index: 30; display: none; pointer-events: none;
+    padding: 6px; background: var(--panel-solid); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  }
+  #imgPop img { display: block; width: 280px; height: 210px; object-fit: cover; border-radius: 5px; }
+  #lightbox {
+    position: fixed; inset: 0; z-index: 40; display: none; align-items: center; justify-content: center;
+    flex-direction: column; gap: 12px; padding: 20px; background: rgba(10, 6, 20, 0.88); cursor: zoom-out;
+  }
+  #lightbox.show { display: flex; }
+  #lightbox img { max-width: min(92vw, 900px); max-height: 72vh; border-radius: 8px; object-fit: contain; }
+  #lightbox p { margin: 0; max-width: 60ch; text-align: center; font-size: 14px; line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -437,6 +459,9 @@
 </header>
 
 <main id="days"><p class="loading-note" id="loadNote">A kínálat betöltése…</p></main>
+
+<div id="imgPop" aria-hidden="true"><img alt=""></div>
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Étel fotó"><img alt=""><p></p></div>
 
 <footer class="bar">
   <div class="bar-inner">
@@ -505,7 +530,8 @@
     row.innerHTML =
       "<span class=\"tick-col\"><input class=\"chk\" type=\"checkbox\"" + checkedAttr + " id=\"" + id + "\" data-code=\"" + esc(it.code) + "\" data-day=\"" + esc(day.key) + "\" data-daylabel=\"" + esc(day.label) + "\"><span class=\"price\">" + esc(it.price) + "</span></span>" +
       "<span class=\"code-col\"><span class=\"code\">" + esc(it.code) + "</span>" + kcalHtml + "</span>" +
-      "<span class=\"name-wrap\"><span class=\"name\">" + esc(it.name) + "</span></span>";
+      "<span class=\"name-wrap\"><span class=\"name\">" + esc(it.name) + "</span></span>" +
+      (it.id ? "<button type=\"button\" class=\"img-btn\" data-id=\"" + esc(it.id) + "\" data-name=\"" + esc(it.name) + "\" aria-label=\"Fotó megnézése\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 8h3l2-3h6l2 3h3v11H4z\"/><circle cx=\"12\" cy=\"13\" r=\"3.5\"/></svg></button>" : "<span></span>");
 
     return row;
   }
@@ -686,6 +712,51 @@
     }
   });
 
+
+
+  /* ---------- Étel fotók (Interfood képszolgáltatás) ---------- */
+  var imgPop = document.getElementById("imgPop");
+  var imgPopImg = imgPop.querySelector("img");
+  var lightbox = document.getElementById("lightbox");
+  var lbImg = lightbox.querySelector("img");
+  var lbText = lightbox.querySelector("p");
+  var canHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
+
+  function imgUrl(id, w, h) {
+    return "https://ia.interfood.hu/api/v1/i?menu_item_id=" + encodeURIComponent(id) + "&width=" + w + "&height=" + h;
+  }
+
+  daysEl.addEventListener("click", function (e) {
+    var btn = e.target.closest(".img-btn");
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    imgPop.style.display = "none";
+    lbImg.src = imgUrl(btn.dataset.id, 900, 675);
+    lbText.textContent = btn.dataset.name;
+    lightbox.classList.add("show");
+  });
+  lightbox.addEventListener("click", function () { lightbox.classList.remove("show"); lbImg.removeAttribute("src"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") { lightbox.classList.remove("show"); }
+  });
+
+  if (canHover) {
+    daysEl.addEventListener("mouseover", function (e) {
+      var btn = e.target.closest(".img-btn");
+      if (!btn) return;
+      imgPopImg.src = imgUrl(btn.dataset.id, 560, 420);
+      var r = btn.getBoundingClientRect();
+      var left = Math.min(window.innerWidth - 306, Math.max(8, r.right - 296));
+      var top = r.bottom + 8 + 232 > window.innerHeight ? r.top - 240 : r.bottom + 8;
+      imgPop.style.left = left + "px";
+      imgPop.style.top = Math.max(8, top) + "px";
+      imgPop.style.display = "block";
+    });
+    daysEl.addEventListener("mouseout", function (e) {
+      if (e.target.closest(".img-btn")) imgPop.style.display = "none";
+    });
+  }
 
   /* ---------- Adatok betöltése ---------- */
 
