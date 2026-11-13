@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-13T15:55:20.446Z",
+ "fetchedAt": "2026-11-13T15:45:13.450Z",
  "currentWeek": {
   "year": 2026,
   "week": 47
@@ -28,7 +28,6 @@
    ],
    "items": [
     {
-     "id": 40434,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "hetfo",
@@ -37,7 +36,6 @@
      "price": "2360 Ft"
     },
     {
-     "id": 40436,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "szerda",
@@ -46,7 +44,6 @@
      "price": "2060 Ft"
     },
     {
-     "id": 40438,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "pentek",
@@ -55,7 +52,6 @@
      "price": "1940 Ft"
     },
     {
-     "id": 40455,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -64,7 +60,6 @@
      "price": "980 Ft"
     },
     {
-     "id": 40457,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -73,7 +68,6 @@
      "price": "925 Ft"
     },
     {
-     "id": 40459,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -82,7 +76,6 @@
      "price": "925 Ft"
     },
     {
-     "id": 40466,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -91,7 +84,6 @@
      "price": "840 Ft"
     },
     {
-     "id": 40468,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -100,7 +92,6 @@
      "price": "770 Ft"
     },
     {
-     "id": 40470,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -109,7 +100,6 @@
      "price": "820 Ft"
     },
     {
-     "id": 40476,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -118,7 +108,6 @@
      "price": "865 Ft"
     },
     {
-     "id": 40478,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -127,7 +116,6 @@
      "price": "770 Ft"
     },
     {
-     "id": 40480,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -136,7 +124,6 @@
      "price": "820 Ft"
     },
     {
-     "id": 40496,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -145,7 +132,6 @@
      "price": "1390 Ft"
     },
     {
-     "id": 40498,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -154,7 +140,6 @@
      "price": "1375 Ft"
     },
     {
-     "id": 40500,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -163,7 +148,6 @@
      "price": "1440 Ft"
     },
     {
-     "id": 40506,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -172,7 +156,6 @@
      "price": "1455 Ft"
     },
     {
-     "id": 40508,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -181,7 +164,6 @@
      "price": "1845 Ft"
     },
     {
-     "id": 40510,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -190,7 +172,6 @@
      "price": "1420 Ft"
     },
     {
-     "id": 40516,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -199,7 +180,6 @@
      "price": "1295 Ft"
     },
     {
-     "id": 40518,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -208,7 +188,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 40520,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -217,7 +196,6 @@
      "price": "1160 Ft"
     },
     {
-     "id": 40638,
      "code": "AK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -226,7 +204,6 @@
      "price": "1555 Ft"
     },
     {
-     "id": 40640,
      "code": "AK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -235,7 +212,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 40642,
      "code": "AK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -244,7 +220,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 40650,
      "code": "BK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -253,7 +228,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 40652,
      "code": "BK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -262,7 +236,6 @@
      "price": "1640 Ft"
     },
     {
-     "id": 40654,
      "code": "BK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -271,7 +244,6 @@
      "price": "1280 Ft"
     },
     {
-     "id": 40661,
      "code": "CK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -280,7 +252,6 @@
      "price": "1285 Ft"
     },
     {
-     "id": 40663,
      "code": "CK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -289,7 +260,6 @@
      "price": "1460 Ft"
     },
     {
-     "id": 40665,
      "code": "CK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -298,7 +268,6 @@
      "price": "1090 Ft"
     },
     {
-     "id": 40671,
      "code": "DK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -307,7 +276,6 @@
      "price": "1380 Ft"
     },
     {
-     "id": 40673,
      "code": "DK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -316,7 +284,6 @@
      "price": "1580 Ft"
     },
     {
-     "id": 40675,
      "code": "DK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -325,7 +292,6 @@
      "price": "1570 Ft"
     },
     {
-     "id": 40681,
      "code": "GK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -334,7 +300,6 @@
      "price": "1455 Ft"
     },
     {
-     "id": 40683,
      "code": "GK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -343,7 +308,6 @@
      "price": "1440 Ft"
     },
     {
-     "id": 40685,
      "code": "GK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -352,7 +316,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 40592,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -361,7 +324,6 @@
      "price": "1180 Ft"
     },
     {
-     "id": 40594,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -370,7 +332,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 40596,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -379,7 +340,6 @@
      "price": "1285 Ft"
     },
     {
-     "id": 40602,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -388,7 +348,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 40604,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -397,7 +356,6 @@
      "price": "1265 Ft"
     },
     {
-     "id": 40606,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -406,7 +364,6 @@
      "price": "1330 Ft"
     },
     {
-     "id": 40612,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -415,7 +372,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 40614,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -424,7 +380,6 @@
      "price": "1285 Ft"
     },
     {
-     "id": 40616,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -433,7 +388,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 40901,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "hetfo",
@@ -442,7 +396,6 @@
      "price": "2225 Ft"
     },
     {
-     "id": 40903,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "szerda",
@@ -451,7 +404,6 @@
      "price": "2130 Ft"
     },
     {
-     "id": 40905,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "pentek",
@@ -460,7 +412,6 @@
      "price": "2260 Ft"
     },
     {
-     "id": 40728,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "hetfo",
@@ -469,7 +420,6 @@
      "price": "2180 Ft"
     },
     {
-     "id": 40730,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "szerda",
@@ -478,7 +428,6 @@
      "price": "1940 Ft"
     },
     {
-     "id": 40732,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "pentek",
@@ -511,7 +460,6 @@
    ],
    "items": [
     {
-     "id": 40921,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "hetfo",
@@ -520,7 +468,6 @@
      "price": "2140 Ft"
     },
     {
-     "id": 40923,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "szerda",
@@ -529,7 +476,6 @@
      "price": "2495 Ft"
     },
     {
-     "id": 40925,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "pentek",
@@ -538,7 +484,6 @@
      "price": "3220 Ft"
     },
     {
-     "id": 40942,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -547,7 +492,6 @@
      "price": "965 Ft"
     },
     {
-     "id": 40944,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -556,7 +500,6 @@
      "price": "720 Ft"
     },
     {
-     "id": 40946,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -565,7 +508,6 @@
      "price": "1050 Ft"
     },
     {
-     "id": 40953,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -574,7 +516,6 @@
      "price": "790 Ft"
     },
     {
-     "id": 40955,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -583,7 +524,6 @@
      "price": "740 Ft"
     },
     {
-     "id": 40957,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -592,7 +532,6 @@
      "price": "795 Ft"
     },
     {
-     "id": 40963,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -601,7 +540,6 @@
      "price": "790 Ft"
     },
     {
-     "id": 40965,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -610,7 +548,6 @@
      "price": "895 Ft"
     },
     {
-     "id": 40967,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -619,7 +556,6 @@
      "price": "890 Ft"
     },
     {
-     "id": 40983,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -628,7 +564,6 @@
      "price": "1695 Ft"
     },
     {
-     "id": 40985,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -637,7 +572,6 @@
      "price": "1580 Ft"
     },
     {
-     "id": 40987,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -646,7 +580,6 @@
      "price": "1395 Ft"
     },
     {
-     "id": 40993,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -655,7 +588,6 @@
      "price": "975 Ft"
     },
     {
-     "id": 40995,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -664,7 +596,6 @@
      "price": "1395 Ft"
     },
     {
-     "id": 40997,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -673,7 +604,6 @@
      "price": "965 Ft"
     },
     {
-     "id": 41003,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -682,7 +612,6 @@
      "price": "1360 Ft"
     },
     {
-     "id": 41005,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -691,7 +620,6 @@
      "price": "940 Ft"
     },
     {
-     "id": 41007,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -700,7 +628,6 @@
      "price": "1495 Ft"
     },
     {
-     "id": 41125,
      "code": "AK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -709,7 +636,6 @@
      "price": "1485 Ft"
     },
     {
-     "id": 41127,
      "code": "AK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -718,7 +644,6 @@
      "price": "1375 Ft"
     },
     {
-     "id": 41129,
      "code": "AK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -727,7 +652,6 @@
      "price": "1490 Ft"
     },
     {
-     "id": 41137,
      "code": "BK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -736,7 +660,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 41139,
      "code": "BK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -745,7 +668,6 @@
      "price": "1350 Ft"
     },
     {
-     "id": 41141,
      "code": "BK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -754,7 +676,6 @@
      "price": "1245 Ft"
     },
     {
-     "id": 41148,
      "code": "CK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -763,7 +684,6 @@
      "price": "1590 Ft"
     },
     {
-     "id": 41150,
      "code": "CK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -772,7 +692,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41152,
      "code": "CK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -781,7 +700,6 @@
      "price": "1460 Ft"
     },
     {
-     "id": 41158,
      "code": "DK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -790,7 +708,6 @@
      "price": "1320 Ft"
     },
     {
-     "id": 41160,
      "code": "DK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -799,7 +716,6 @@
      "price": "1595 Ft"
     },
     {
-     "id": 41162,
      "code": "DK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -808,7 +724,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41168,
      "code": "GK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -817,7 +732,6 @@
      "price": "1520 Ft"
     },
     {
-     "id": 41170,
      "code": "GK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -826,7 +740,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 41172,
      "code": "GK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -835,7 +748,6 @@
      "price": "1420 Ft"
     },
     {
-     "id": 41079,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -844,7 +756,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41081,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -853,7 +764,6 @@
      "price": "1340 Ft"
     },
     {
-     "id": 41083,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -862,7 +772,6 @@
      "price": "1265 Ft"
     },
     {
-     "id": 41089,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -871,7 +780,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41091,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -880,7 +788,6 @@
      "price": "1385 Ft"
     },
     {
-     "id": 41093,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -889,7 +796,6 @@
      "price": "1195 Ft"
     },
     {
-     "id": 41099,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -898,7 +804,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 41101,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -907,7 +812,6 @@
      "price": "1320 Ft"
     },
     {
-     "id": 41103,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -916,7 +820,6 @@
      "price": "1245 Ft"
     },
     {
-     "id": 41388,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "hetfo",
@@ -925,7 +828,6 @@
      "price": "2150 Ft"
     },
     {
-     "id": 41390,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "szerda",
@@ -934,7 +836,6 @@
      "price": "2130 Ft"
     },
     {
-     "id": 41392,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "pentek",
@@ -943,7 +844,6 @@
      "price": "2435 Ft"
     },
     {
-     "id": 41215,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "hetfo",
@@ -952,7 +852,6 @@
      "price": "1950 Ft"
     },
     {
-     "id": 41217,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "szerda",
@@ -961,7 +860,6 @@
      "price": "1970 Ft"
     },
     {
-     "id": 41219,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "pentek",
@@ -994,7 +892,6 @@
    ],
    "items": [
     {
-     "id": 41408,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "hetfo",
@@ -1003,7 +900,6 @@
      "price": "1940 Ft"
     },
     {
-     "id": 41410,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "szerda",
@@ -1012,7 +908,6 @@
      "price": "2420 Ft"
     },
     {
-     "id": 41412,
      "code": "SP1",
      "cat": "Sport és egészség",
      "day": "pentek",
@@ -1021,7 +916,6 @@
      "price": "2465 Ft"
     },
     {
-     "id": 41429,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -1030,7 +924,6 @@
      "price": "880 Ft"
     },
     {
-     "id": 41431,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -1039,7 +932,6 @@
      "price": "820 Ft"
     },
     {
-     "id": 41433,
      "code": "L1K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -1048,7 +940,6 @@
      "price": "920 Ft"
     },
     {
-     "id": 41440,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -1057,7 +948,6 @@
      "price": "755 Ft"
     },
     {
-     "id": 41442,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -1066,7 +956,6 @@
      "price": "720 Ft"
     },
     {
-     "id": 41444,
      "code": "L2K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -1075,7 +964,6 @@
      "price": "840 Ft"
     },
     {
-     "id": 41450,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "hetfo",
@@ -1084,7 +972,6 @@
      "price": "840 Ft"
     },
     {
-     "id": 41452,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "szerda",
@@ -1093,7 +980,6 @@
      "price": "740 Ft"
     },
     {
-     "id": 41454,
      "code": "L3K",
      "cat": "Kis Leves",
      "day": "pentek",
@@ -1102,7 +988,6 @@
      "price": "870 Ft"
     },
     {
-     "id": 41470,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -1111,7 +996,6 @@
      "price": "1265 Ft"
     },
     {
-     "id": 41472,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -1120,7 +1004,6 @@
      "price": "1420 Ft"
     },
     {
-     "id": 41474,
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -1129,7 +1012,6 @@
      "price": "1320 Ft"
     },
     {
-     "id": 41480,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -1138,7 +1020,6 @@
      "price": "1520 Ft"
     },
     {
-     "id": 41482,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -1147,7 +1028,6 @@
      "price": "1255 Ft"
     },
     {
-     "id": 41484,
      "code": "E3K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -1156,7 +1036,6 @@
      "price": "1420 Ft"
     },
     {
-     "id": 41490,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -1165,7 +1044,6 @@
      "price": "1265 Ft"
     },
     {
-     "id": 41492,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "szerda",
@@ -1174,7 +1052,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 41494,
      "code": "E4K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "pentek",
@@ -1183,7 +1060,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 41612,
      "code": "AK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -1192,7 +1068,6 @@
      "price": "1165 Ft"
     },
     {
-     "id": 41614,
      "code": "AK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -1201,7 +1076,6 @@
      "price": "1090 Ft"
     },
     {
-     "id": 41616,
      "code": "AK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -1210,7 +1084,6 @@
      "price": "1440 Ft"
     },
     {
-     "id": 41624,
      "code": "BK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -1219,7 +1092,6 @@
      "price": "1355 Ft"
     },
     {
-     "id": 41626,
      "code": "BK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -1228,7 +1100,6 @@
      "price": "1120 Ft"
     },
     {
-     "id": 41628,
      "code": "BK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -1237,7 +1108,6 @@
      "price": "1490 Ft"
     },
     {
-     "id": 41635,
      "code": "CK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -1246,7 +1116,6 @@
      "price": "1250 Ft"
     },
     {
-     "id": 41637,
      "code": "CK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -1255,7 +1124,6 @@
      "price": "1470 Ft"
     },
     {
-     "id": 41639,
      "code": "CK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -1264,7 +1132,6 @@
      "price": "1185 Ft"
     },
     {
-     "id": 41645,
      "code": "DK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -1273,7 +1140,6 @@
      "price": "1390 Ft"
     },
     {
-     "id": 41647,
      "code": "DK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -1282,7 +1148,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41649,
      "code": "DK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -1291,7 +1156,6 @@
      "price": "1380 Ft"
     },
     {
-     "id": 41655,
      "code": "GK",
      "cat": "Kis adag",
      "day": "hetfo",
@@ -1300,7 +1164,6 @@
      "price": "1495 Ft"
     },
     {
-     "id": 41657,
      "code": "GK",
      "cat": "Kis adag",
      "day": "szerda",
@@ -1309,7 +1172,6 @@
      "price": "1520 Ft"
     },
     {
-     "id": 41659,
      "code": "GK",
      "cat": "Kis adag",
      "day": "pentek",
@@ -1318,7 +1180,6 @@
      "price": "1540 Ft"
     },
     {
-     "id": 41566,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -1327,7 +1188,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 41568,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -1336,7 +1196,6 @@
      "price": "1275 Ft"
     },
     {
-     "id": 41570,
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -1345,7 +1204,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41576,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -1354,7 +1212,6 @@
      "price": "1220 Ft"
     },
     {
-     "id": 41578,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -1363,7 +1220,6 @@
      "price": "1245 Ft"
     },
     {
-     "id": 41580,
      "code": "F3K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -1372,7 +1228,6 @@
      "price": "1240 Ft"
     },
     {
-     "id": 41586,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -1381,7 +1236,6 @@
      "price": "1250 Ft"
     },
     {
-     "id": 41588,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "szerda",
@@ -1390,7 +1244,6 @@
      "price": "1320 Ft"
     },
     {
-     "id": 41590,
      "code": "F4K",
      "cat": "Kis főzelék feltéttel",
      "day": "pentek",
@@ -1399,7 +1252,6 @@
      "price": "1160 Ft"
     },
     {
-     "id": 41875,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "hetfo",
@@ -1408,7 +1260,6 @@
      "price": "2225 Ft"
     },
     {
-     "id": 41877,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "szerda",
@@ -1417,7 +1268,6 @@
      "price": "2185 Ft"
     },
     {
-     "id": 41879,
      "code": "DKM",
      "cat": "Kis menü (kis leves + kis főétel)",
      "day": "pentek",
@@ -1426,7 +1276,6 @@
      "price": "2195 Ft"
     },
     {
-     "id": 41702,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "hetfo",
@@ -1435,7 +1284,6 @@
      "price": "1985 Ft"
     },
     {
-     "id": 41704,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "szerda",
@@ -1444,7 +1292,6 @@
      "price": "1795 Ft"
     },
     {
-     "id": 41706,
      "code": "KM",
      "cat": "Kis menü (kis adag leves+kis adag főétel)",
      "day": "pentek",
