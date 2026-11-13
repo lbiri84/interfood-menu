@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interfood heti válogatás</title>
+<style>
+  :root {
+    --paper: #f6f4f2;
+    --paper-raised: #ffffff;
+    --ink: #161514;
+    --ink-dim: #6b625f;
+    --line: #ddd7d3;
+    --accent: #6b1a27;
+    --accent-ink: #ffffff;
+    --accent-soft: #f3dfe2;
+    --cyan: #0a6b76;
+    --warn: #8a4b00;
+    --shadow: 0 1px 2px rgba(20,15,14,0.06), 0 8px 20px -12px rgba(20,15,14,0.2);
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0c0b0b;
+      --paper-raised: #1c1516;
+      --ink: #f2ece9;
+      --ink-dim: #ab9f9b;
+      --line: #3a2e2f;
+      --accent: #c23c53;
+      --accent-ink: #1c0810;
+      --accent-soft: #33161b;
+      --cyan: #35d6e3;
+      --warn: #f0b35a;
+      --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 8px 24px -12px rgba(0,0,0,0.6);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0c0b0b;
+    --paper-raised: #1c1516;
+    --ink: #f2ece9;
+    --ink-dim: #ab9f9b;
+    --line: #3a2e2f;
+    --accent: #c23c53;
+    --accent-ink: #1c0810;
+    --accent-soft: #33161b;
+    --cyan: #35d6e3;
+    --warn: #f0b35a;
+    --shadow: 0 1px 2px rgba(0,0,0,0.35), 0 8px 24px -12px rgba(0,0,0,0.6);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", system-ui, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    padding: 28px 20px 120px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+
+  header.page {
+    margin-bottom: 22px;
+  }
+  .head-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .head-text { min-width: 0; flex: 1 1 320px; }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 28px;
+    line-height: 1.15;
+    margin: 0 0 8px;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    color: var(--ink-dim);
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 70ch;
+  }
+
+  .refresh-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex: 0 1 auto;
+  }
+  .refresh-actions { display: flex; gap: 8px; }
+  button.refresh {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  button.refresh:hover:not(:disabled) { filter: brightness(1.06); }
+  button.refresh:disabled { opacity: 0.6; cursor: progress; }
+  button.refresh:focus-visible, button.stop:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  button.refresh svg { flex: none; }
+  button.refresh.busy svg { animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  button.stop {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--ink-dim);
+    border-radius: 8px;
+    padding: 11px 14px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  button.stop:hover { color: var(--ink); border-color: var(--ink-dim); }
+  .status {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: var(--ink-dim);
+    max-width: 44ch;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+  .status.error { color: var(--warn); }
+  @media (max-width: 640px) {
+    .refresh-box { align-items: stretch; width: 100%; }
+    .refresh-actions button.refresh { flex: 1; justify-content: center; }
+    .status { text-align: left; max-width: none; }
+  }
+
+  #days {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper-raised);
+    box-shadow: var(--shadow);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .table-wrap {
+    min-width: 640px;
+  }
+
+  .col-heads {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(210px, 1fr));
+    background: var(--accent-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .col-head {
+    padding: 12px 16px;
+    border-right: 1px solid var(--line);
+  }
+  .col-head:last-child { border-right: none; }
+  .col-head h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 17px;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .col-head .date {
+    font-size: 12px;
+    color: var(--ink-dim);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cat-label {
+    padding: 11px 16px;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: var(--accent-ink);
+    background: var(--accent);
+  }
+
+  .cat-rows {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(210px, 1fr));
+  }
+  .day-col {
+    border-right: 1px solid var(--line);
+  }
+  .day-col:last-child { border-right: none; }
+
+  .day-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    background: var(--accent-soft);
+    border-bottom: 1px solid var(--line);
+  }
+  .day-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid var(--line);
+    background: var(--paper-raised);
+    color: var(--ink);
+    border-radius: 8px;
+    padding: 9px 6px;
+    font: inherit;
+    font-size: 13.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .day-tab .tab-date {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--ink-dim);
+  }
+  .day-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .day-tab.active .tab-date { color: var(--accent-ink); opacity: 0.85; }
+
+  .mobile-day-head {
+    padding: 12px 16px 2px;
+  }
+  .mobile-day-head h2 {
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    font-size: 17px;
+    margin: 0;
+  }
+  .mobile-day-head .date {
+    font-size: 12px;
+    color: var(--ink-dim);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .food-row {
+    display: grid;
+    grid-template-columns: 22px 54px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+  }
+  .food-row:last-child { border-bottom: none; }
+  .food-row:hover { background: color-mix(in srgb, var(--accent-soft) 55%, transparent); }
+  .food-row.checked { background: var(--accent-soft); }
+
+  input.chk {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid var(--ink-dim);
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    background: var(--paper-raised);
+    flex: none;
+  }
+  input.chk::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    clip-path: polygon(14% 44%, 0 65%, 36% 100%, 100% 20%, 82% 4%, 34% 72%);
+    background: transparent;
+    transform: scale(0.9);
+  }
+  input.chk:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  input.chk:checked::after { background: var(--accent-ink); }
+  input.chk:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 5px;
+    padding: 3px 5px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .name-wrap { min-width: 0; }
+  .name {
+    font-size: 13.5px;
+    line-height: 1.35;
+  }
+  .cat {
+    font-size: 11px;
+    color: var(--ink-dim);
+    margin-top: 2px;
+  }
+
+  .meta {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .kcal {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--cyan);
+  }
+  .kcal.none { color: var(--ink-dim); font-weight: 400; }
+  .price {
+    font-size: 11px;
+    color: var(--ink-dim);
+    margin-top: 1px;
+  }
+
+  .empty-note {
+    padding: 11px 16px;
+    font-size: 13px;
+    color: var(--ink-dim);
+    font-style: italic;
+  }
+
+  footer.bar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background: var(--paper-raised);
+    border-top: 1px solid var(--line);
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 24px -12px rgba(0,0,0,0.15);
+  }
+  .bar-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .count {
+    font-size: 13.5px;
+    color: var(--ink-dim);
+    flex: 1;
+  }
+  .count strong { color: var(--ink); font-variant-numeric: tabular-nums; }
+  button.copy {
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  button.copy:disabled { opacity: 0.45; cursor: not-allowed; }
+  button.copy:not(:disabled):hover { filter: brightness(1.06); }
+  button.clear {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--ink-dim);
+    border-radius: 8px;
+    padding: 11px 14px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  button.clear:hover { color: var(--ink); border-color: var(--ink-dim); }
+
+  .preview {
+    max-width: 1140px;
+    margin: 8px auto 0;
+    font-size: 12px;
+    color: var(--ink-dim);
+    display: none;
+  }
+  .preview.show { display: block; }
+  .preview textarea {
+    width: 100%;
+    resize: none;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-top: 4px;
+  }
+
+  .refresh-box select {
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    min-width: 0;
+  }
+  .refresh-box select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .loading-note { padding: 28px 16px; color: var(--ink-dim); font-size: 14px; }
+  .loading-note.error { color: var(--warn); }
+  button.refresh:disabled { cursor: progress; }
+</style>
+</head>
+<body>
+
+<header class="page">
+  <div class="head-row">
+    <div class="head-text">
+      <p class="eyebrow" id="eyebrow">Interfood ebédrendelés</p>
+      <h1>Hétfő / szerda / péntek válogatás</h1>
+      <p class="sub">Kiválasztott kódok: SP1, L1K, L2K, L3K, E2K, E3K, E4K, F1K, F2K, F3K, F4K, DKM, csak a hétfői, szerdai és pénteki napokra.</p>
+    </div>
+    <div class="refresh-box">
+      <div class="refresh-actions">
+        <select id="weekSel" aria-label="Hét kiválasztása" hidden></select>
+        <button class="refresh" id="refreshBtn" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+          <span id="refreshLabel">Frissítés</span>
+        </button>
+      </div>
+      <p class="status" id="status" role="status"></p>
+    </div>
+  </div>
+</header>
+
+<main id="days"><p class="loading-note" id="loadNote">A kínálat betöltése…</p></main>
+
+<footer class="bar">
+  <div class="bar-inner">
+    <div class="count"><strong id="countNum">0</strong> étel kiválasztva</div>
+    <button class="clear" id="clearBtn" type="button">Törlés</button>
+    <button class="copy" id="copyBtn" type="button" disabled>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+      Vágólapra másolás
+    </button>
+  </div>
+  <div class="preview" id="preview">
+    <span id="previewLabel">Másolva:</span>
+    <textarea id="previewText" rows="3" readonly></textarea>
+  </div>
+</footer>
+
+<script>
+  var DATA_URL = "data/menu.json";
+
+  var DAYS = [];
+  var ITEMS = [];
+  var WEEKS = [];
+  var weekIdx = 0;
+
+  var CATEGORY_ORDER = ["Extra", "Levesek", "Főételek", "Főzelékek"];
+
+  function groupFor(code) {
+    if (code === "SP1" || code === "DKM") return "Extra";
+    if (code === "L1K" || code === "L2K" || code === "L3K") return "Levesek";
+    if (code.charAt(0) === "F") return "Főzelékek";
+    return "Főételek";
+  }
+
+  var daysEl0 = document.getElementById("days");
+  var daysEl = daysEl0;
+  var mobileQuery = window.matchMedia("(max-width: 780px)");
+  var selected = new Set(); // keys: "<dayKey>::<code>"
+  var activeDay = "";
+  var rowIndex = 0;
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function isMobile() {
+    return mobileQuery.matches;
+  }
+
+  function buildFoodRow(it, day) {
+    var row = document.createElement("label");
+    row.className = "food-row";
+    var id = "chk-" + (rowIndex++);
+    var checkedAttr = selected.has(day.key + "::" + it.code) ? " checked" : "";
+
+    var kcalHtml = it.kcal
+      ? "<div class=\"kcal\">" + esc(it.kcal) + " kcal</div>"
+      : "<div class=\"kcal none\">nincs adat</div>";
+
+    row.innerHTML =
+      "<input class=\"chk\" type=\"checkbox\"" + checkedAttr + " id=\"" + id + "\" data-code=\"" + esc(it.code) + "\" data-day=\"" + esc(day.key) + "\" data-daylabel=\"" + esc(day.label) + "\">" +
+      "<span class=\"code\">" + esc(it.code) + "</span>" +
+      "<span class=\"name-wrap\"><span class=\"name\">" + esc(it.name) + "</span><div class=\"cat\">" + esc(it.cat) + "</div></span>" +
+      "<span class=\"meta\">" + kcalHtml + "<div class=\"price\">" + esc(it.price) + "</div></span>";
+
+    return row;
+  }
+
+  function buildTable() {
+    var wrap = document.createElement("div");
+    wrap.className = "table-wrap";
+
+    var colHeads = document.createElement("div");
+    colHeads.className = "col-heads";
+    DAYS.forEach(function (day) {
+      var col = document.createElement("div");
+      col.className = "col-head";
+      col.innerHTML = "<h2>" + esc(day.label) + "</h2><span class=\"date\">" + esc(day.date) + "</span>";
+      colHeads.appendChild(col);
+    });
+    wrap.appendChild(colHeads);
+
+    CATEGORY_ORDER.forEach(function (groupName) {
+      var anyInGroup = ITEMS.some(function (it) { return it.name && groupFor(it.code) === groupName; });
+      if (!anyInGroup) return;
+
+      var catLabel = document.createElement("div");
+      catLabel.className = "cat-label";
+      catLabel.textContent = groupName;
+      wrap.appendChild(catLabel);
+
+      var catRows = document.createElement("div");
+      catRows.className = "cat-rows";
+
+      DAYS.forEach(function (day) {
+        var dayCol = document.createElement("div");
+        dayCol.className = "day-col";
+
+        var rows = ITEMS.filter(function (it) {
+          return it.day === day.key && it.name && groupFor(it.code) === groupName;
+        });
+
+        if (!rows.length) {
+          var note = document.createElement("div");
+          note.className = "empty-note";
+          note.textContent = "Nincs elérhető tétel.";
+          dayCol.appendChild(note);
+        } else {
+          rows.forEach(function (it) {
+            dayCol.appendChild(buildFoodRow(it, day));
+          });
+        }
+
+        catRows.appendChild(dayCol);
+      });
+
+      wrap.appendChild(catRows);
+    });
+
+    daysEl.appendChild(wrap);
+  }
+
+  function buildMobile() {
+    var tabs = document.createElement("div");
+    tabs.className = "day-tabs";
+    DAYS.forEach(function (day) {
+      var tab = document.createElement("button");
+      tab.type = "button";
+      tab.className = "day-tab" + (day.key === activeDay ? " active" : "");
+      tab.innerHTML = esc(day.label) + "<span class=\"tab-date\">" + esc(day.date.slice(5)) + "</span>";
+      tab.addEventListener("click", function () {
+        activeDay = day.key;
+        renderDays();
+      });
+      tabs.appendChild(tab);
+    });
+    daysEl.appendChild(tabs);
+
+    var day = DAYS.filter(function (d) { return d.key === activeDay; })[0] || DAYS[0];
+
+    var head = document.createElement("div");
+    head.className = "mobile-day-head";
+    head.innerHTML = "<h2>" + esc(day.label) + "</h2><span class=\"date\">" + esc(day.date) + "</span>";
+    daysEl.appendChild(head);
+
+    CATEGORY_ORDER.forEach(function (groupName) {
+      var rows = ITEMS.filter(function (it) {
+        return it.day === day.key && it.name && groupFor(it.code) === groupName;
+      });
+      if (!rows.length) return;
+
+      var catLabel = document.createElement("div");
+      catLabel.className = "cat-label";
+      catLabel.textContent = groupName;
+      daysEl.appendChild(catLabel);
+
+      rows.forEach(function (it) {
+        daysEl.appendChild(buildFoodRow(it, day));
+      });
+    });
+  }
+
+  function renderDays() {
+    if (!DAYS.length) return;
+    daysEl.innerHTML = "";
+    rowIndex = 0;
+    if (isMobile()) buildMobile(); else buildTable();
+    refresh();
+  }
+
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener("change", renderDays);
+  } else if (mobileQuery.addListener) {
+    mobileQuery.addListener(renderDays);
+  }
+
+  var countNum = document.getElementById("countNum");
+  var copyBtn = document.getElementById("copyBtn");
+  var clearBtn = document.getElementById("clearBtn");
+  var preview = document.getElementById("preview");
+  var previewText = document.getElementById("previewText");
+
+  function refresh() {
+    countNum.textContent = selected.size;
+    copyBtn.disabled = selected.size === 0;
+    Array.prototype.slice.call(document.querySelectorAll(".chk")).forEach(function (c) {
+      var isChecked = selected.has(c.dataset.day + "::" + c.dataset.code);
+      c.checked = isChecked;
+      c.closest(".food-row").classList.toggle("checked", isChecked);
+    });
+  }
+
+  daysEl.addEventListener("change", function (e) {
+    if (!e.target.classList.contains("chk")) return;
+    var key = e.target.dataset.day + "::" + e.target.dataset.code;
+    if (e.target.checked) selected.add(key); else selected.delete(key);
+    refresh();
+  });
+
+  clearBtn.addEventListener("click", function () {
+    selected.clear();
+    refresh();
+    preview.classList.remove("show");
+  });
+
+  function buildClipboardText() {
+    var lines = [];
+    DAYS.forEach(function (d) {
+      var codes = [];
+      ITEMS.forEach(function (it) {
+        if (it.day === d.key && it.name && selected.has(d.key + "::" + it.code)) codes.push(it.code);
+      });
+      if (codes.length) lines.push(d.label + ": " + codes.join(", "));
+    });
+    return lines.join("\n");
+  }
+
+  copyBtn.addEventListener("click", function () {
+    var text = buildClipboardText();
+    if (!text) return;
+    previewText.value = text;
+    preview.classList.add("show");
+
+    function fallback() {
+      previewText.focus();
+      previewText.select();
+      try { document.execCommand("copy"); } catch (err) {}
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        copyBtn.textContent = "";
+        var icon = document.createElement("span");
+        icon.textContent = "Másolva ✓";
+        copyBtn.appendChild(icon);
+        setTimeout(function () {
+          copyBtn.innerHTML = "<svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"11\" height=\"11\" rx=\"2\"/><path d=\"M5 15V5a2 2 0 0 1 2-2h10\"/></svg> Vágólapra másolás";
+        }, 1600);
+      }).catch(fallback);
+    } else {
+      fallback();
+    }
+  });
+
+
+  /* ---------- Adatok betöltése ---------- */
+
+  var refreshBtn = document.getElementById("refreshBtn");
+  var refreshLabel = document.getElementById("refreshLabel");
+  var statusEl = document.getElementById("status");
+  var eyebrowEl = document.getElementById("eyebrow");
+  var weekSel = document.getElementById("weekSel");
+  var fetchedLabel = "";
+
+  function setStatus(text, isError) {
+    statusEl.textContent = text || "";
+    statusEl.classList.toggle("error", !!isError);
+  }
+
+  function fmtFetched(iso) {
+    try {
+      return new Date(iso).toLocaleString("hu-HU", {
+        timeZone: "Europe/Budapest", year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", minute: "2-digit"
+      });
+    } catch (e) { return iso; }
+  }
+
+  function applyWeek(idx) {
+    var w = WEEKS[idx];
+    weekIdx = idx;
+    DAYS = w.days;
+    ITEMS = w.items;
+    activeDay = DAYS[0].key;
+    var valid = new Set();
+    ITEMS.forEach(function (it) { valid.add(it.day + "::" + it.code); });
+    Array.from(selected).forEach(function (k) { if (!valid.has(k)) selected.delete(k); });
+    eyebrowEl.textContent = "Interfood ebédrendelés · " + w.week + ". hét (" + w.range + ")";
+    renderDays();
+  }
+
+  function fillWeekSelect() {
+    weekSel.innerHTML = "";
+    WEEKS.forEach(function (w, i) {
+      var o = document.createElement("option");
+      o.value = String(i);
+      o.textContent = w.week + ". hét (" + w.range + ")";
+      weekSel.appendChild(o);
+    });
+    weekSel.value = String(weekIdx);
+    weekSel.hidden = WEEKS.length < 2;
+  }
+
+  async function loadData(manual) {
+    refreshBtn.disabled = true;
+    refreshLabel.textContent = "Frissítés…";
+    try {
+      var res = await fetch(DATA_URL + "?t=" + Date.now(), { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      var data = await res.json();
+      if (!data || !Array.isArray(data.weeks) || !data.weeks.length) throw new Error("üres adat");
+      var keepWeek = WEEKS.length ? WEEKS[weekIdx] : null;
+      WEEKS = data.weeks;
+      var idx = 0;
+      if (keepWeek) {
+        WEEKS.forEach(function (w, i) { if (w.year === keepWeek.year && w.week === keepWeek.week) idx = i; });
+      } else if (data.currentWeek) {
+        WEEKS.forEach(function (w, i) { if (w.year === Number(data.currentWeek.year) && w.week === Number(data.currentWeek.week)) idx = i; });
+      }
+      fetchedLabel = data.fetchedAt ? fmtFetched(data.fetchedAt) : "";
+      fillWeekSelect();
+      weekSel.value = String(idx);
+      applyWeek(idx);
+      setStatus(fetchedLabel ? "A kínálat utoljára ekkor változott: " + fetchedLabel : "", false);
+    } catch (e) {
+      if (!WEEKS.length) {
+        daysEl.innerHTML = "<p class=\"loading-note error\">A kínálat betöltése nem sikerült. Próbáld újra a Frissítés gombbal.</p>";
+      }
+      setStatus("A frissítés nem sikerült. Próbáld újra egy perc múlva.", true);
+    } finally {
+      refreshBtn.disabled = false;
+      refreshLabel.textContent = "Frissítés";
+    }
+  }
+
+  weekSel.addEventListener("change", function () { applyWeek(Number(weekSel.value)); });
+  refreshBtn.addEventListener("click", function () { loadData(true); });
+
+  loadData(false);
+</script>
+</body>
+</html>
