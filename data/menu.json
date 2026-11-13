@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-13T15:27:07.359Z",
+ "fetchedAt": "2026-11-13T15:35:19.201Z",
  "currentWeek": {
   "year": 2026,
   "week": 47
@@ -122,30 +122,6 @@
      "name": "Tejszínes körte krémleves",
      "kcal": 342,
      "price": "820 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "hetfo",
-     "name": "Zellerkrémleves",
-     "kcal": 110,
-     "price": "795 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "szerda",
-     "name": "Erőleves marhahússal",
-     "kcal": 188,
-     "price": "1120 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "pentek",
-     "name": "Brokkolikrémleves pirított mandulával",
-     "kcal": 163,
-     "price": "850 Ft"
     },
     {
      "code": "E2K",
@@ -604,30 +580,6 @@
      "price": "890 Ft"
     },
     {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "hetfo",
-     "name": "Karfiolkrémleves csirkecsíkokkal",
-     "kcal": 230,
-     "price": "1075 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "szerda",
-     "name": "Citromos sertésraguleves zöldségekkel gazdagon",
-     "kcal": 253,
-     "price": "950 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "pentek",
-     "name": "Borjúgulyás zöldséggel gazdagon",
-     "kcal": 258,
-     "price": "1180 Ft"
-    },
-    {
      "code": "E2K",
      "cat": "Fitness és alakbarát kis adag",
      "day": "hetfo",
@@ -1082,30 +1034,6 @@
      "name": "Erdei gyümölcsleves",
      "kcal": 324,
      "price": "870 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "hetfo",
-     "name": "Brokkolikrémleves pirított mandulával",
-     "kcal": 163,
-     "price": "855 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "szerda",
-     "name": "Marhacsontleves zöldségekkel gazdagon",
-     "kcal": 118,
-     "price": "885 Ft"
-    },
-    {
-     "code": "Z1K",
-     "cat": "Zero kis leves",
-     "day": "pentek",
-     "name": "Hűsítő, mentás eperkrémleves",
-     "kcal": 270,
-     "price": "1095 Ft"
     },
     {
      "code": "E2K",
