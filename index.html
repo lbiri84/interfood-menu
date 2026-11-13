@@ -418,17 +418,6 @@
     footer.bar { padding-left: 16px; padding-right: 16px; }
     button.copy, button.clear { padding-left: 14px; padding-right: 14px; }
   }
-  details.setup {
-    max-width: 1132px; margin: 0 auto 14px; padding: 10px 14px;
-    background: rgba(16, 11, 26, 0.55); border: 1px solid var(--line); border-radius: 10px;
-    font-size: 12.5px; line-height: 1.5; color: var(--ink);
-  }
-  details.setup summary { cursor: pointer; font-weight: 600; letter-spacing: 0.04em; }
-  details.setup ol { margin: 8px 0 0; padding-left: 20px; }
-  details.setup a.bm {
-    display: inline-block; padding: 3px 10px; border-radius: 6px; background: #ff6f61; color: #1a1020;
-    font-weight: 700; text-decoration: none; cursor: grab;
-  }
 </style>
 </head>
 <body>
@@ -446,15 +435,6 @@
     </div>
   </div>
 </header>
-<details class="setup" id="setup">
-  <summary>Egyszeri beállítás: kosárba tevő könyvjelző</summary>
-  <ol>
-    <li>Húzd ezt a gombot a böngésző könyvjelzősávjára: <a class="bm" id="bookmarklet" href="#">Ebéd a kosárba</a></li>
-    <li>Válaszd ki lent az ételeket, majd nyomd meg a „Kosárba az Interfoodon” gombot. Megnyílik az Interfood rendelőoldala.</li>
-    <li>Ott kattints a könyvjelzőre: a kiválasztott ételek bekerülnek a kosárba (amik már benne voltak, azokat nem duplázza). A rendelést te adod le.</li>
-  </ol>
-</details>
-
 
 <main id="days"><p class="loading-note" id="loadNote">A kínálat betöltése…</p></main>
 
@@ -462,11 +442,14 @@
   <div class="bar-inner">
     <div class="count"><strong id="countNum">0</strong> étel kiválasztva</div>
     <button class="clear" id="clearBtn" type="button">Törlés</button>
-    <button class="copy" id="copyBtn" type="button" disabled>Kosárba az Interfoodon</button>
+    <button class="copy" id="copyBtn" type="button" disabled>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+      Vágólapra másolás
+    </button>
   </div>
   <div class="preview" id="preview">
-    <span id="previewLabel"></span>
-    <textarea id="previewText" rows="3" readonly hidden></textarea>
+    <span id="previewLabel">Másolva:</span>
+    <textarea id="previewText" rows="3" readonly></textarea>
   </div>
 </footer>
 
@@ -640,7 +623,6 @@
   var clearBtn = document.getElementById("clearBtn");
   var preview = document.getElementById("preview");
   var previewText = document.getElementById("previewText");
-  var previewLabel = document.getElementById("previewLabel");
 
   function refresh() {
     countNum.textContent = selected.size;
@@ -678,28 +660,32 @@
   }
 
   copyBtn.addEventListener("click", function () {
-    var ids = [];
-    DAYS.forEach(function (d) {
-      ITEMS.forEach(function (it) {
-        if (it.id && it.day === d.key && it.name && selected.has(d.key + "::" + it.code)) ids.push(it.id);
-      });
-    });
-    if (!ids.length) return;
-    window.open("https://rendel.interfood.hu/#ebed=" + ids.join(","), "_blank");
-    previewLabel.textContent = "Az Interfood oldalán nyomd meg az „Ebéd a kosárba” könyvjelzőt.";
+    var text = buildClipboardText();
+    if (!text) return;
+    previewText.value = text;
     preview.classList.add("show");
+
+    function fallback() {
+      previewText.focus();
+      previewText.select();
+      try { document.execCommand("copy"); } catch (err) {}
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        copyBtn.textContent = "";
+        var icon = document.createElement("span");
+        icon.textContent = "Másolva ✓";
+        copyBtn.appendChild(icon);
+        setTimeout(function () {
+          copyBtn.innerHTML = "<svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"11\" height=\"11\" rx=\"2\"/><path d=\"M5 15V5a2 2 0 0 1 2-2h10\"/></svg> Vágólapra másolás";
+        }, 1600);
+      }).catch(fallback);
+    } else {
+      fallback();
+    }
   });
 
-  (function () {
-    var code = "(async()=>{try{var m=location.hash.match(/ebed=([\\d,]+)/);if(!m){alert('Nincs kijelölt étel. Az étel-választó oldalról nyisd meg az Interfoodot.');return}"
-      + "var a=localStorage.getItem('_capuid');var H={'Content-Type':'application/json'};"
-      + "var c=await(await fetch('https://ia.interfood.hu/api/v2/carts/cart?anonymous_id='+a)).json();"
-      + "var have=((c.data&&c.data.cart_items)||[]).map(function(x){return x.menu_item_id});"
-      + "var ids=m[1].split(',').map(Number).filter(function(i){return have.indexOf(i)<0});"
-      + "for(var i=0;i<ids.length;i++){var r=await fetch('https://ia.interfood.hu/api/v2/carts/add',{method:'POST',headers:H,body:JSON.stringify({menu_item_id:ids[i],anonymous_id:a})});if(!r.ok)throw new Error('HTTP '+r.status)}"
-      + "history.replaceState(null,'',location.pathname);location.reload()}catch(e){alert('Hiba: '+e.message)}})()";
-    document.getElementById("bookmarklet").setAttribute("href", "javascript:" + code);
-  })();
 
   /* ---------- Adatok betöltése ---------- */
 
