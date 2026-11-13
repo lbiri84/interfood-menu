@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-11-13T15:35:19.201Z",
+ "fetchedAt": "2026-11-13T15:45:13.450Z",
  "currentWeek": {
   "year": 2026,
   "week": 47
@@ -314,30 +314,6 @@
      "name": "Fűszeres sült csirkemell sajtkrémmártással, farfalle tésztával",
      "kcal": 615,
      "price": "1340 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "hetfo",
-     "name": "Paradicsomos káposztafőzelék",
-     "kcal": 201,
-     "price": "840 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "szerda",
-     "name": "Tejfölös babfőzelék",
-     "kcal": 534,
-     "price": "920 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "pentek",
-     "name": "Zöldborsófőzelék",
-     "kcal": 459,
-     "price": "950 Ft"
     },
     {
      "code": "F2K",
@@ -772,30 +748,6 @@
      "price": "1420 Ft"
     },
     {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "hetfo",
-     "name": "Finomfőzelék",
-     "kcal": 291,
-     "price": "895 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "szerda",
-     "name": "Tökfőzelék",
-     "kcal": 249,
-     "price": "1040 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "pentek",
-     "name": "Sárgaborsó főzelék",
-     "kcal": 330,
-     "price": "870 Ft"
-    },
-    {
      "code": "F2K",
      "cat": "Kis főzelék feltéttel",
      "day": "hetfo",
@@ -1226,30 +1178,6 @@
      "name": "Harcsapaprikás, vajas galuska",
      "kcal": 594,
      "price": "1540 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "hetfo",
-     "name": "Lencsefőzelék",
-     "kcal": 429,
-     "price": "880 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "szerda",
-     "name": "Zöldbabfőzelék",
-     "kcal": 324,
-     "price": "940 Ft"
-    },
-    {
-     "code": "F1K",
-     "cat": "Kis főzelék",
-     "day": "pentek",
-     "name": "Parajfőzelék",
-     "kcal": 327,
-     "price": "895 Ft"
     },
     {
      "code": "F2K",
