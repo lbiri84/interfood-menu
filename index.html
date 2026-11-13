@@ -425,7 +425,6 @@
 <header class="page">
   <div class="head-row">
     <div class="head-text">
-      <p class="eyebrow" id="eyebrow">Heti ebédrendelés</p>
       <h1><span class="h1-a">Interfood</span><span class="h1-b">Válogatás</span></h1>
     </div>
     <div class="refresh-box">
@@ -691,7 +690,6 @@
   /* ---------- Adatok betöltése ---------- */
 
   var statusEl = document.getElementById("status");
-  var eyebrowEl = document.getElementById("eyebrow");
   var weekSel = document.getElementById("weekSel");
   var fetchedLabel = "";
 
@@ -718,7 +716,6 @@
     var valid = new Set();
     ITEMS.forEach(function (it) { valid.add(it.day + "::" + it.code); });
     Array.from(selected).forEach(function (k) { if (!valid.has(k)) selected.delete(k); });
-    eyebrowEl.textContent = w.week + ". hét · " + w.range;
     renderDays();
   }
 
