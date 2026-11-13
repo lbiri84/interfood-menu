@@ -31,6 +31,10 @@ jobs:
         with:
           node-version: 22
 
+      - name: Debug
+        continue-on-error: true
+        run: node scripts/debug.mjs
+
       - name: Kínálat beolvasása az Interfoodról
         id: fetch
         continue-on-error: true
