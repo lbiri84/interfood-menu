@@ -454,7 +454,7 @@
     <div class="head-text">
       <p class="eyebrow" id="eyebrow">Interfood ebédrendelés</p>
       <h1>Hétfő / szerda / péntek válogatás</h1>
-      <p class="sub">Kiválasztott kódok: SP1, L1K, L2K, L3K, Z1K, E2K, E3K, E4K, AK, BK, CK, DK, GK, F1K, F2K, F3K, F4K, DKM, KM, csak a hétfői, szerdai és pénteki napokra.</p>
+      <p class="sub">Kiválasztott kódok: SP1, L1K, L2K, L3K, E2K, E3K, E4K, AK, BK, CK, DK, GK, F1K, F2K, F3K, F4K, DKM, KM, csak a hétfői, szerdai és pénteki napokra.</p>
     </div>
     <div class="refresh-box">
       <div class="refresh-actions">
@@ -498,7 +498,7 @@
 
   function groupFor(code) {
     if (code === "SP1" || code === "DKM" || code === "KM") return "Extra";
-    if (code === "L1K" || code === "L2K" || code === "L3K" || code === "Z1K") return "Levesek";
+    if (code === "L1K" || code === "L2K" || code === "L3K") return "Levesek";
     if (code.charAt(0) === "F") return "Főzelékek";
     return "Főételek";
   }

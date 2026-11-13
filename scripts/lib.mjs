@@ -1,7 +1,7 @@
 // Az Interfood heti kínálatának feldolgozása. Tiszta függvények, hálózat nélkül.
 
 export const CODES = [
-  "SP1", "L1K", "L2K", "L3K", "Z1K",
+  "SP1", "L1K", "L2K", "L3K",
   "E2K", "E3K", "E4K",
   "AK", "BK", "CK", "DK", "GK",
   "F1K", "F2K", "F3K", "F4K",
