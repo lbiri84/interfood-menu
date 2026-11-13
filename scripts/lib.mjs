@@ -64,7 +64,8 @@ export function buildWeek(menuData, year, week, codes = CODES) {
       for (const it of cat.items || []) {
         const d = DAY_KEYS[dayOfWeek(it.date)];
         if (!d) continue;
-        const name = fixText((it.food && (it.food.display_name || it.food.name)) || it.food_name_one);
+        const rawName = ((it.food && (it.food.display_name || it.food.name)) || it.food_name_one || "").trim();
+        const name = fixText(rawName);
         if (!name) continue;
         dates[d.key] = it.date;
         items.push({
@@ -73,6 +74,7 @@ export function buildWeek(menuData, year, week, codes = CODES) {
           cat: fixText(cat.name),
           day: d.key,
           name,
+          veg: /\*\s*$/.test(rawName),
           kcal: kcalOf(it),
           price: Math.round(Number(it.price)) + " Ft",
         });

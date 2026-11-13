@@ -413,6 +413,8 @@
     button.copy, button.clear { padding-left: 14px; padding-right: 14px; }
   }
 
+  .name strong { font-weight: 700; }
+  .name .leaf { color: #5fe08c; margin-right: 6px; vertical-align: -2px; flex: none; }
   .img-btn {
     align-self: start; flex: none; width: 30px; height: 30px; padding: 0;
     display: grid; place-content: center; cursor: pointer;
@@ -513,6 +515,13 @@
     return mobileQuery.matches;
   }
 
+  var MEAT_RE = /[\p{L}]*(?:csirke|csibe|marha|sertés|sertes|pulyka|kacsa|liba|bárány|borjú|hal|lazac|harcsa|pisztráng|ponty|szalonna|bacon|kolbász|virsli|sonka|felvágott|csülök|hús|tarja|oldalas|lapocka|kebab|gyros|pacal)[\p{L}]*/giu;
+  var LEAF_SVG = "<svg class=\"leaf\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" role=\"img\" aria-label=\"Húsmentes\"><title>Húsmentes</title><path d=\"M5 19c0-8 5-14 15-14 0 10-6 15-14 15\"/><path d=\"M5 19c3-5 6-8 10-10\"/></svg>";
+  function nameHtml(it) {
+    var h = esc(it.name).replace(MEAT_RE, "<strong>$&</strong>");
+    return it.veg ? LEAF_SVG + h : h;
+  }
+
   function buildFoodRow(it, day) {
     var row = document.createElement("label");
     row.className = "food-row";
@@ -526,7 +535,7 @@
     row.innerHTML =
       "<span class=\"tick-col\"><input class=\"chk\" type=\"checkbox\"" + checkedAttr + " id=\"" + id + "\" data-code=\"" + esc(it.code) + "\" data-day=\"" + esc(day.key) + "\" data-daylabel=\"" + esc(day.label) + "\"><span class=\"price\">" + esc(it.price) + "</span></span>" +
       "<span class=\"code-col\"><span class=\"code\">" + esc(it.code) + "</span>" + kcalHtml + "</span>" +
-      "<span class=\"name-wrap\"><span class=\"name\">" + esc(it.name) + "</span></span>" +
+      "<span class=\"name-wrap\"><span class=\"name\">" + nameHtml(it) + "</span></span>" +
       (it.id ? "<button type=\"button\" class=\"img-btn\" data-id=\"" + esc(it.id) + "\" data-name=\"" + esc(it.name) + "\" aria-label=\"Fotó megnézése\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 8h3l2-3h6l2 3h3v11H4z\"/><circle cx=\"12\" cy=\"13\" r=\"3.5\"/></svg></button>" : "<span></span>");
 
     return row;
