@@ -461,10 +461,10 @@
   var WEEKS = [];
   var weekIdx = 0;
 
-  var CATEGORY_ORDER = ["Extra", "Levesek", "Főételek", "Főzelékek"];
+  var CATEGORY_ORDER = ["MENU", "Levesek", "Főételek", "Főzelékek"];
 
   function groupFor(code) {
-    if (code === "SP1" || code === "DKM" || code === "KM") return "Extra";
+    if (code === "SP1" || code === "DKM" || code === "KM") return "MENU";
     if (code === "L1K" || code === "L2K" || code === "L3K") return "Levesek";
     if (code.charAt(0) === "F") return "Főzelékek";
     return "Főételek";
