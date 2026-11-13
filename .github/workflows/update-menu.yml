@@ -49,7 +49,7 @@ jobs:
         run: |
           mkdir _site
           cp index.html _site/
-          cp -r data _site/data
+          cp -r data fonts _site/
           [ -f CNAME ] && cp CNAME _site/ || true
 
       - uses: actions/configure-pages@v5
