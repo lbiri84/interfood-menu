@@ -50,7 +50,7 @@ jobs:
       - name: Oldal összeállítása
         run: |
           mkdir _site
-          cp index.html robots.txt tokens.css icon.svg _site/
+          cp index.html robots.txt icon.svg _site/
           cp -r data _site/
           [ -f CNAME ] && cp CNAME _site/ || true
 
