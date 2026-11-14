@@ -4,6 +4,10 @@ Egyoldalas oldal az Interfood heti kínálatának átnézéséhez. A hétfői, s
 kódokat (SP1, L1K, L2K, L3K, E2K, E3K, E4K, AK, BK, CK, DK, GK, F2K, F3K, F4K, DKM, KM) lehet kijelölni, majd a kijelölést
 vágólapra másolni.
 
+## Belépés
+
+Az oldal csak belépve használható. A `<head>` elején a laszlobiri belépési kapu áll (`https://laszlobiri.com/lib/v1/gate.js`): belépés nélkül a `https://laszlobiri.com/belepes/` oldalra irányít, és belépés után visszahoz. A kapu böngészőben működik; a `data/menu.json` és az oldal fájljai továbbra is nyilvánosak (az Interfood nyilvános kínálata). Részletek: a laszlobiri-com repó `design-system/README.md` és `docs/backend-terv.md` fájlja.
+
 ## Felépítés
 
 - `index.html`: az oldal, külső függőség nélkül. A `data/menu.json` fájlból tölti be a kínálatot.

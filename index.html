@@ -2,6 +2,11 @@
 <html lang="hu">
 <head>
 <meta charset="utf-8">
+<!-- Belépési kapu (https://laszlobiri.com/lib/v1/gate.js): belépés nélkül azonnal a belépőoldalra irányít. -->
+<style id="lb-gate">html{visibility:hidden}</style>
+<script>/* lb-gate */if(!/(?:^|;\s*)sb-[a-z0-9]+-auth-token(?:\.0)?=/.test(document.cookie))location.replace('https://laszlobiri.com/belepes/?next='+encodeURIComponent(location.href))</script>
+<script type="module" src="https://laszlobiri.com/lib/v1/gate.js"></script>
+<script type="module" src="https://laszlobiri.com/lib/v1/auth-badge.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Interfood heti válogatás</title>
@@ -428,6 +433,7 @@
     <div class="head-text">
       <h1><span class="h1-a">Interfood</span> <span class="h1-b">Válogatás</span></h1>
       <p class="status" id="status" role="status"></p>
+      <lb-auth></lb-auth>
     </div>
     <div class="refresh-box">
       <div class="refresh-actions">
