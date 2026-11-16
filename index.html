@@ -81,6 +81,9 @@
     letter-spacing: -0.03em;
     margin: 0 0 6px;
   }
+  h1 { display: flex; align-items: center; gap: 0.3em; flex-wrap: wrap; }
+  h1 .mk { width: 0.9em; height: auto; flex: none; display: block; }
+  .mk .l{fill:var(--mark-l)}.mk .b{fill:var(--mark-b)}
   h1 .h1-a { color: var(--fg); }
   h1 .h1-b { color: var(--accent); }
   .sub {
@@ -431,7 +434,7 @@
 <header class="page">
   <div class="head-row">
     <div class="head-text">
-      <h1><span class="h1-a">Interfood</span> <span class="h1-b">Válogatás</span></h1>
+      <h1><svg class="mk" viewBox="4 6 86 88" aria-hidden="true"><polygon class="l" points="4,8 18,8 18,92"/><polygon class="l" points="4,8 18,92 4,92" fill-opacity="0.8"/><polygon class="l" points="4,78 34,78 34,92" fill-opacity="0.9"/><polygon class="l" points="4,78 34,92 4,92" fill-opacity="0.72"/><polygon class="b" points="40,14 54,6 54,92"/><polygon class="b" points="40,14 54,92 40,92" fill-opacity="0.84"/><polygon class="b" points="70,70 54,46 76,46"/><polygon class="b" points="70,70 76,46 90,62" fill-opacity="0.74"/><polygon class="b" points="70,70 90,62 86,86" fill-opacity="0.9"/><polygon class="b" points="70,70 86,86 72,94" fill-opacity="0.66"/><polygon class="b" points="70,70 72,94 54,92" fill-opacity="0.82"/><polygon class="b" points="70,70 54,92 54,46" fill-opacity="0.95"/></svg><span><span class="h1-a">Interfood</span> <span class="h1-b">Válogatás</span></span></h1>
       <p class="status" id="status" role="status"></p>
       <lb-auth></lb-auth>
     </div>
